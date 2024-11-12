@@ -1,7 +1,7 @@
 #include <vector>
 // Kill warnings for cub
 #pragma warning(push, 0)
-#include <cub/cub/cub.cuh>
+#include <cub/cub.cuh>
 #pragma warning(pop)
 
 namespace nbl { namespace drivers {

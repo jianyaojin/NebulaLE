@@ -1,5 +1,8 @@
 nebula changelog
 
+1.0.3 (WIP)
+  - (No real code change) Drop support for C++11 and CUDA <9.2; add support for modern versions of CUDA.
+
 1.0.2 (2021-05-26)
   - Fix bug where only partial simulations were done when a low number of primaries are provided (GPU version).
 
