@@ -1,3 +1,6 @@
 build
 doc/html
 doc/latex
+run_with_redirect.sh
+.vscode/launch.json
+test
