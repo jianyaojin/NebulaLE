@@ -81,14 +81,30 @@ public:
 				// We want to track only scattering events, not interface events
 				bool track = this->_particles.next_scatter(particle_idx);
 				const particle before = this->_particles[particle_idx];
+				const int parent_edge = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
+
+				// Get the number of particles in the simulation to check later if a secondary was generated.
+				const size_t num_before = this->_particles.get_total_count(); 
 
 				this->intersect(particle_idx);
 				this->scatter(particle_idx);
 
 				const particle after = this->_particles[particle_idx];
-				if (track && before.kin_energy != after.kin_energy)
+				const int child_edge_one = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
+				const size_t num_after = this->_particles.get_total_count(); 
+
+				// If no secondary generated, child_edge_two is equal to child_edge_one. 
+				// If secondary generated, child_edge_two will have the value of that edge.
+				const int child_edge_two =
+    				(num_before == num_after)
+      				? child_edge_one
+      				: static_cast<int>(this->_particles.get_edge_tag(num_after - 1));
+
+				if (track)
 					func(before, after,
-						this->_particles.get_primary_tag(particle_idx));
+						this->_particles.get_primary_tag(particle_idx),
+						parent_edge, child_edge_one, child_edge_two 
+					);
 			}
 		}
 	}

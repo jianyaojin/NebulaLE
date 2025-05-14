@@ -51,6 +51,12 @@ public:
 
 	// Get primary tag
 	inline PHYSICS primary_tag_t get_primary_tag(particle_index_t i) const;
+	
+	// Get the current edge_tag of a particle
+	inline PHYSICS size_t get_edge_tag(particle_index_t i) const;
+
+	// Update the edge tag of a given particle. Also increment the next cascade edge tag
+	inline PHYSICS void update_edge_tag(particle_index_t i);
 
 	// Get last intersected triangle for a particle (or nullptr)
 	inline PHYSICS triangle const * get_last_triangle(particle_index_t i) const;
@@ -87,23 +93,26 @@ protected:
 	 * It inherits from the "additional_data" template parameter, which may be
 	 * void. This mechanism allows derived particle managers to store additional
 	 * data in addition to the necessities.
+	 * 
 	 */
 	struct particle_struct
 	{
-		particle_status status;
-		uint8_t next_scatter;
+		particle_status status;    // See above under enum particle_status
+		uint8_t next_scatter;      // ID for the next scattering event type
 		material_index_t current_material;
-		particle particle_data;
+		particle particle_data;    // Particle data: kinetic energy, position, direction.
 		primary_tag_t primary_tag; // Tag belonging to primary electron
 		uint32_t secondary_tag;    // Unique tag for this electron in the primary's cascade
-		triangle* last_triangle;
+		triangle* last_triangle; 
+		size_t edge_tag;           // Unique tag for each edge between scattering events. Since it is attached to an electron, the same electron may have many different edge_tags.
 	};
 	std::vector<particle_struct> particles;
 
 	struct cascade_struct
 	{
-		uint32_t next_secondary_tag;
-		uint32_t running_count;
+		uint32_t next_secondary_tag; // Keeps track of what the next secondary tag will be
+		uint32_t running_count;      // How many electrons are being run in the current cascade in total
+		uint32_t next_edge_tag;      // Keeps track of the next edge to be produced in the simulation. 
 	};
 	std::map<primary_tag_t, cascade_struct> cascades;
 };

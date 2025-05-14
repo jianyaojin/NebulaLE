@@ -34,10 +34,11 @@ auto cpu_particle_manager<material_manager_t>::push(
 			primary_particles[i],
 			tags[i],
 			0,
-			nullptr
+			nullptr,
+			0
 		});
 
-		cascades.insert(std::make_pair(tags[i], cascade_struct{1, 1}));
+		cascades.insert(std::make_pair(tags[i], cascade_struct{1, 1, 1}));
 	}
 	return N;
 }
@@ -150,6 +151,21 @@ PHYSICS auto cpu_particle_manager<material_manager_t>::get_primary_tag(particle_
 }
 
 template<typename material_manager_t>
+PHYSICS auto cpu_particle_manager<material_manager_t>::get_edge_tag(particle_index_t i) const
+-> size_t
+{
+	return particles[i].edge_tag;
+}
+
+template<typename material_manager_t>
+PHYSICS void cpu_particle_manager<material_manager_t>::update_edge_tag(particle_index_t i)
+{
+	primary_tag_t primtag = particles[i].primary_tag;
+	particles[i].edge_tag = cascades[primtag].next_edge_tag;
+	cascades[primtag].next_edge_tag++;
+}
+
+template<typename material_manager_t>
 PHYSICS triangle const * cpu_particle_manager<material_manager_t>::get_last_triangle(
 	particle_index_t i) const
 {
@@ -190,7 +206,8 @@ PHYSICS void cpu_particle_manager<material_manager_t>::create_secondary(
 		secondary_particle,
 		primary_tag,
 		cascades[primary_tag].next_secondary_tag++,
-		nullptr
+		nullptr,
+		cascades[primary_tag].next_edge_tag++
 	});
 	++cascades[primary_tag].running_count;
 }

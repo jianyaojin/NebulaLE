@@ -112,6 +112,9 @@ public:
 
 		// Store the scattered particle in memory
 		particle_mgr[particle_idx] = this_particle;
+
+		// Update the new particle's edge tag and increment the edgetag count in cascades
+		particle_mgr.update_edge_tag(particle_idx);
 	}
 
 	/**

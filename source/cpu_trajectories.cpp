@@ -34,7 +34,7 @@ using driver = nbl::drivers::trajectories_cpu_driver<
 int main(int argc, char** argv)
 {
 	// Print version information
-	std::clog << "This is Nebula version "
+	std::clog << "This is Nebula trajectories version "
 		<< VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << "\n\n"
 		"Physics models:\n";
 	scatter_physics<false>::print_info(std::clog);
@@ -187,13 +187,13 @@ int main(int argc, char** argv)
 				std::get<2>(work_data)); // number
 
 			// Simulate a little, output deposition data
-			d.simulate_to_end([&deposit_buff, &pixels](particle const & before, particle const & after, uint32_t tag)
+			d.simulate_to_end([&deposit_buff, &pixels](particle const & before, particle const & after, uint32_t tag, int const parent_edge, int const child_edge_one, int const child_edge_two)
 			{
 				deposit_buff.add(std::array<float, 5>{
 					after.pos.x, after.pos.y, after.pos.z,
 					before.kin_energy, before.kin_energy - after.kin_energy});
 				deposit_buff.add(std::array<int, 4>{
-					pixels[tag].x, pixels[tag].y, 1,2});
+					static_cast<int>(tag), parent_edge, child_edge_one, child_edge_two});
 			});
 
 			// Flush output data
@@ -212,7 +212,8 @@ int main(int argc, char** argv)
 	};
 
 	// Simulation
-	const auto n_threads = std::thread::hardware_concurrency();
+	//const auto n_threads = std::thread::hardware_concurrency();
+	const auto n_threads = 1;
 	std::clog << "Creating " << n_threads << " CPU drivers" << std::endl;
 	std::vector<std::thread> threads;
 

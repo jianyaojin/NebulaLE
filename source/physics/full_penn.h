@@ -127,7 +127,10 @@ public:
 				const real sintheta_pi_pf = sqrtr(1 - costheta_pi_pf * costheta_pi_pf);
 				this_particle.kin_energy -= omega;
 				this_particle.dir = this_particle.dir*costheta_pi_pf + prim_normal_dir * sintheta_pi_pf;
+
+				// Update primary as well as edge tag
 				particle_mgr[particle_idx] = this_particle;
+				particle_mgr.update_edge_tag(particle_idx);
 
 
 				// Create secondary
@@ -235,9 +238,10 @@ public:
 			{
 				// sub-band gap energy loss in semiconductors and insulators (see page 78 thesis T.V.)
 				// energy loss due to longitudinal optical phonon excitation is assumed
-				// update energy and EXIT
+				// update energy and edge tag and EXIT
 				this_particle.kin_energy -= omega;
 				particle_mgr[particle_idx] = this_particle;
+				particle_mgr.update_edge_tag(particle_idx);
 				return;
 			}
 		}
@@ -265,6 +269,17 @@ public:
 		normalise(secondary_dir);
 		secondary_dir += sqrtr(binding / dK) * rng.uniform_vector();
 		normalise(secondary_dir);
+		
+		this_particle.kin_energy -= omega;
+
+		// primary direction determined by non-relativistic momentum-conservation,
+		// i.e. sin(theta)*primary_dir_2 = primary_dir - cos(theta)*secondary_dir.
+		// See thesis T.V. Eq. 3.111
+		this_particle.dir -= cos_theta * secondary_dir;
+
+		// Store the scattered particle in memory, update edge tag
+		particle_mgr[particle_idx] = this_particle;
+		particle_mgr.update_edge_tag(particle_idx);
 
 		if (generate_secondary)
 		{
@@ -275,16 +290,6 @@ public:
 
 			particle_mgr.create_secondary(particle_idx, secondary_particle);
 		}
-
-		this_particle.kin_energy -= omega;
-
-		// primary direction determined by non-relativistic momentum-conservation,
-		// i.e. sin(theta)*primary_dir_2 = primary_dir - cos(theta)*secondary_dir.
-		// See thesis T.V. Eq. 3.111
-		this_particle.dir -= cos_theta * secondary_dir;
-
-		// Store the scattered particle in memory
-		particle_mgr[particle_idx] = this_particle;
 	}
 
 

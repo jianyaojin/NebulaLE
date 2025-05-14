@@ -33,7 +33,7 @@ constexpr real pi = 3.1415926535897932_r;
 
 /// Version number
 constexpr unsigned int VERSION_MAJOR = 1;
-constexpr unsigned int VERSION_MINOR = 0;
-constexpr unsigned int VERSION_PATCH = 2;
+constexpr unsigned int VERSION_MINOR = 1;
+constexpr unsigned int VERSION_PATCH = 0;
 
 #endif // __CONFIG_H_
