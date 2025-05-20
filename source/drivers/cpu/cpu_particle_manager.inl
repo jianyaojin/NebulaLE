@@ -195,6 +195,12 @@ PHYSICS bool cpu_particle_manager<material_manager_t>::next_intersect(particle_i
 }
 
 template<typename material_manager_t>
+PHYSICS bool cpu_particle_manager<material_manager_t>::terminated(particle_index_t i) const
+{
+	return particles[i].status == TERMINATED;
+}
+
+template<typename material_manager_t>
 PHYSICS void cpu_particle_manager<material_manager_t>::create_secondary(
 	particle_index_t primary_idx, particle secondary_particle)
 {

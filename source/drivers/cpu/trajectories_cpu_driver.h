@@ -78,8 +78,10 @@ public:
 			{
 				this->init(particle_idx);
 
-				// We want to track only scattering events, not interface events
-				bool track = this->_particles.next_scatter(particle_idx);
+				// Variables that check for the status of the particle
+				bool track_scatter = this->_particles.next_scatter(particle_idx);
+				bool track_terminated = this->_particles.terminated(particle_idx);
+
 				const particle before = this->_particles[particle_idx];
 				const int parent_edge = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
 
@@ -100,10 +102,15 @@ public:
       				? child_edge_one
       				: static_cast<int>(this->_particles.get_edge_tag(num_after - 1));
 
-				if (track)
+				if (track_scatter)
 					func(before, after,
 						this->_particles.get_primary_tag(particle_idx),
 						parent_edge, child_edge_one, child_edge_two 
+					);
+				else if (track_terminated)
+					func(before, after,
+						this->_particles.get_primary_tag(particle_idx),
+						parent_edge, -999, -999
 					);
 			}
 		}

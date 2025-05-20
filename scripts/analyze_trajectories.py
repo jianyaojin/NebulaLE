@@ -26,11 +26,21 @@ def construct_tree(dat):
     # Set up plot environment, emphasize root node
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(dat[0]['x'],dat[0]['y'],dat[0]['z'], marker='o', color='red')
+    ax.scatter(dat[0]['x'],dat[0]['y'],dat[0]['z'], marker='o', color='lime')
 
     # Plot the rest
     for i in range(len(dat)):
-        ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='mediumturquoise')
+        
+        # Distinguish between inelastic, elastic and termination events
+        if dat[i]['ce1'] == dat[i]['ce2'] and not dat[i]['ce1'] == -999:
+            # Elastic is blue-ish
+            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='mediumturquoise')
+        elif dat[i]['ce1'] == -999:
+            # Termination is red
+            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='red')
+        else:
+            # Inelastic is orange
+            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='orange')
 
         # Plot the parent edge
         p_edge = dat[i]['pe']
@@ -49,8 +59,24 @@ def construct_tree(dat):
             #raise NotImplementedError
             ax.plot([x_parent, x_child], [y_parent, y_child], [z_parent, z_child], color='teal', linewidth=1)
 
-        # Plot the child edges
+    # Optional visualization choices:
+    # Draw material surface at z = 0
+    xlim = ax.get_xlim()
+    ylim = ax.get_ylim()
 
+    # Build a grid in the x–y plane
+    xx = np.linspace(xlim[0], xlim[1], 10)
+    yy = np.linspace(ylim[0], ylim[1], 10)
+    XX, YY = np.meshgrid(xx, yy)
+    ZZ = np.zeros_like(XX)    # z = 0 plane
+
+    # Plot a semitransparent brown surface
+    ax.plot_surface(XX, YY, ZZ,
+                    color='saddlebrown',   # or simply 'brown'
+                    alpha=0.4,             # adjust transparency (0=fully transparent, 1=opaque)
+                    linewidth=0,           # no mesh lines
+                    antialiased=True)
+    
     # Clean up and show plot    
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -58,7 +84,7 @@ def construct_tree(dat):
     plt.show()
 
 
-def filter_one(dat, prim=1):
+def filter_one(dat, prim=0):
     """
     Function filters the input data and returns the dataset of a single primary
     electron's cascade. Can specify which electron you specifically want.
@@ -97,17 +123,19 @@ if __name__ == "__main__":
         ('px', '=i'), ('py', '=i')]) # tags of primary electron
 
     ### Read output file
-    data = np.fromfile("testoutput.det", dtype=trajectory_dtype)
+    data = np.fromfile("output_with_terminated.det", dtype=trajectory_dtype)
 
-    ### Process and prepare the data, optionally filter out only the primary
-    ### electron's trajectory
+    ### Process and prepare the data
     one_traj = filter_one(data)
+    print(one_traj)
     #one_traj = filter_primary(one_traj)
+    #coordinates = one_traj[['x', 'y', 'z']]
+    #print(f'How many scattering events do we have? {len(one_traj)}')
+    #print(f'One trajectory data {one_traj}')
+    #print(f'What are the coordinates? {coordinates}')
 
     construct_tree(one_traj)
-    
-    """
-    coordinates = one_traj[['x', 'y', 'z']]
+    """    
     edges = prepare_edges(one_traj[['pe','ce1','ce2']])
     print(f'Edges output from the prepare_edges function {edges}')
 
@@ -120,6 +148,9 @@ if __name__ == "__main__":
         
     plot_trajectories(edges, coordinates)
     """
+    raise NotImplementedError
+
+
 
 """
 Legacy Code:

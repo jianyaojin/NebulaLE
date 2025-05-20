@@ -67,6 +67,9 @@ public:
 	inline PHYSICS uint8_t get_next_scatter(particle_index_t i) const;
 	inline PHYSICS bool next_intersect(particle_index_t i) const;
 
+	// Has the particle been terminated?
+	inline PHYSICS bool terminated(particle_index_t i) const;
+
 	// Add new particle
 	inline PHYSICS void create_secondary(particle_index_t primary_idx, particle secondary_particle);
 
