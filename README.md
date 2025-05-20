@@ -52,3 +52,7 @@ Currently the function does not track the following events:
 - Electron termination events
 
 Also included is a complementary script which processes the trajectories output data and plots them using matplotlib. The matplotlib plot is very slow since there are a lot of edges.
+
+### Update 20-05-2025
+
+Added functionality to track termination events (output from Nebula + analyze_trajectories.py). Termination events have no child edges and so have both ce1 and ce2 equal to -999 (placeholder value, may change).
