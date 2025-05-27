@@ -111,6 +111,9 @@ struct boundary_intersect
 			dU += material_mgr[material_idx_out].barrier;
 		}
 
+		// We want to track boundary crossing / reflection events, so update the edge tag.
+		particle_mgr.update_edge_tag(particle_idx);
+
 		// determine transmission probability (only if energy suffices)
 		// see thesis T.V. Eq. 3.145
 		if (this_particle.kin_energy*cos_theta*cos_theta + dU > 0)
@@ -141,6 +144,7 @@ struct boundary_intersect
 
 		// surface absorption? (this is in accordance with Kieft & Bosch code)
 		// note that the default behaviour has this feature disabled
+		// Note: This feature might not play nice with the new trajectories function. Todo: Double check this!
 		if (interface_absorption)
 		{
 			if (dU < 0 && rng.unit() < expr(1 + 0.5_r*this_particle.kin_energy / dU))

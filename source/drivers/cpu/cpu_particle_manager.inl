@@ -162,7 +162,7 @@ PHYSICS void cpu_particle_manager<material_manager_t>::update_edge_tag(particle_
 {
 	primary_tag_t primtag = particles[i].primary_tag;
 	particles[i].edge_tag = cascades[primtag].next_edge_tag;
-	cascades[primtag].next_edge_tag++;
+	cascades[primtag].next_edge_tag++;        // This line could probably be combined with the above.
 }
 
 template<typename material_manager_t>
@@ -198,6 +198,12 @@ template<typename material_manager_t>
 PHYSICS bool cpu_particle_manager<material_manager_t>::terminated(particle_index_t i) const
 {
 	return particles[i].status == TERMINATED;
+}
+
+template<typename material_manager_t>
+PHYSICS bool cpu_particle_manager<material_manager_t>::detected(particle_index_t i) const
+{
+	return particles[i].status == DETECTED;
 }
 
 template<typename material_manager_t>

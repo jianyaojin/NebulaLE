@@ -70,6 +70,9 @@ public:
 	// Has the particle been terminated?
 	inline PHYSICS bool terminated(particle_index_t i) const;
 
+	// Has the particle been detected?
+	inline PHYSICS bool detected(particle_index_t i) const;
+
 	// Add new particle
 	inline PHYSICS void create_secondary(particle_index_t primary_idx, particle secondary_particle);
 

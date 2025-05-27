@@ -26,20 +26,36 @@ def construct_tree(dat):
     # Set up plot environment, emphasize root node
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(dat[0]['x'],dat[0]['y'],dat[0]['z'], marker='o', color='lime')
+    ax.scatter(dat[0]['x'],dat[0]['y'],dat[0]['z'], marker='o', color='purple')
+
+    inel_counter = 0
+    el_counter = 0
+    bc_counter = 0
+    term_counter = 0
 
     # Plot the rest
     for i in range(len(dat)):
         
-        # Distinguish between inelastic, elastic and termination events
-        if dat[i]['ce1'] == dat[i]['ce2'] and not dat[i]['ce1'] == -999:
+        # Distinguish between inelastic, elastic, boundary crossing and termination events
+        if dat[i]['ce1'] == dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
             # Elastic is blue-ish
+            el_counter += 1
             ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='mediumturquoise')
+        elif dat[i]['ce1'] == -dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
+            # Boundary crossing is green
+            bc_counter += 1
+            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='lime')
         elif dat[i]['ce1'] == -999:
             # Termination is red
+            term_counter += 1
             ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='red')
+        elif dat[i]['ce1'] == -998:
+            # Detection is yellow
+            bc_counter += 1
+            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='forestgreen')
         else:
             # Inelastic is orange
+            inel_counter += 1
             ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='orange')
 
         # Plot the parent edge
@@ -57,7 +73,13 @@ def construct_tree(dat):
 
             #print(f'Coords check: {x_parent, y_parent, z_parent} and child {x_child, y_child, z_child}')
             #raise NotImplementedError
-            ax.plot([x_parent, x_child], [y_parent, y_child], [z_parent, z_child], color='teal', linewidth=1)
+            # Plot the detection events with a different colour line
+            cl = None
+            if dat[i]['ce1'] == -998:
+                cl = 'darkgreen'
+            else:
+                cl = 'teal'
+            ax.plot([x_parent, x_child], [y_parent, y_child], [z_parent, z_child], color=cl, linewidth=1)
 
     # Optional visualization choices:
     # Draw material surface at z = 0
@@ -76,6 +98,10 @@ def construct_tree(dat):
                     alpha=0.4,             # adjust transparency (0=fully transparent, 1=opaque)
                     linewidth=0,           # no mesh lines
                     antialiased=True)
+
+    print(f'Number of inelastic scattering events: {inel_counter}')
+    print(f'Number of elastic scattering events: {el_counter}')
+    print(f'Number of termination scattering events: {term_counter}')
     
     # Clean up and show plot    
     ax.set_xlabel('X')
@@ -123,7 +149,8 @@ if __name__ == "__main__":
         ('px', '=i'), ('py', '=i')]) # tags of primary electron
 
     ### Read output file
-    data = np.fromfile("output_with_terminated.det", dtype=trajectory_dtype)
+    data = np.fromfile("with_bc_events_and_detections.det", dtype=trajectory_dtype)
+    #data = np.fromfile("output_terminate_at_Ef.det", dtype=trajectory_dtype)
 
     ### Process and prepare the data
     one_traj = filter_one(data)
@@ -133,9 +160,10 @@ if __name__ == "__main__":
     #print(f'How many scattering events do we have? {len(one_traj)}')
     #print(f'One trajectory data {one_traj}')
     #print(f'What are the coordinates? {coordinates}')
+    print(f'How many detections? {one_traj[one_traj["ce1"] == -998]}')
 
     construct_tree(one_traj)
-    """    
+    """
     edges = prepare_edges(one_traj[['pe','ce1','ce2']])
     print(f'Edges output from the prepare_edges function {edges}')
 

@@ -38,6 +38,7 @@ This function can be operated via "nebula_cpu_traj", which tracks the electron t
 
 The edge ID tracking piggybacks off of the electron particle class/type. This means that while each edge in the tree has a unique ID, the same electron may (and will) carry multiple different edge IDs across its lifetime.
 The data type outputted by this function is:
+`
 trajectory_dtype = np.dtype([
         ('x',  '=f'), ('y',  '=f'), ('z',  '=f'), # Position
         ('E',  '=f'), # Energy of electron before collision at position x, y, z (in eV)
@@ -46,6 +47,7 @@ trajectory_dtype = np.dtype([
         ('pe', '=i'),  # Parent edge id
         ('ce1', '=i'), # Child edge one
         ('ce2', '=i')])# Child edge two 
+`
 
 Currently the function does not track the following events:
 - Boundary crossing events
@@ -56,3 +58,12 @@ Also included is a complementary script which processes the trajectories output 
 ### Update 20-05-2025
 
 Added functionality to track termination events (output from Nebula + analyze_trajectories.py). Termination events have no child edges and so have both ce1 and ce2 equal to -999 (placeholder value, may change).
+
+### Update 27-05-2025
+
+Added functionality to track both boundary crossing and detection events. 
+
+- Boundary crossing events are similar to elastic scattring events. They can be identified by child tags with opposite signs, so for instance: ce1 = a, ce2 = -a. The current implementation assumes that it is impossible for electrons to be absorbed at a material interface. In other words, it assumes there is always a child edge and thus at least one more logged event after it.
+- Detection events are logged with the child edge ID -998 for both ce1 and ce2. Detection events here differ from those logged by the detector. Here we specifically log the boundary intersection event with a detector, after which the particle would normally be detected and saved.
+
+The python trajectory analysis script has been updated accordingly as well.

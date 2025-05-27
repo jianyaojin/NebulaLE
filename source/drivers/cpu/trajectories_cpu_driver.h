@@ -81,6 +81,7 @@ public:
 				// Variables that check for the status of the particle
 				bool track_scatter = this->_particles.next_scatter(particle_idx);
 				bool track_terminated = this->_particles.terminated(particle_idx);
+				bool track_intersect = this->_particles.next_intersect(particle_idx);
 
 				const particle before = this->_particles[particle_idx];
 				const int parent_edge = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
@@ -91,6 +92,16 @@ public:
 				this->intersect(particle_idx);
 				this->scatter(particle_idx);
 
+				// Now check if the particle has been detected, write data and continue if true
+				if (this->_particles.detected(particle_idx)){
+					func(before, before,
+						this->_particles.get_primary_tag(particle_idx),
+						parent_edge, -998, -998 
+					);
+					continue;
+				}
+
+				// Particle data retrieved after the collision
 				const particle after = this->_particles[particle_idx];
 				const int child_edge_one = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
 				const size_t num_after = this->_particles.get_total_count(); 
@@ -111,6 +122,11 @@ public:
 					func(before, after,
 						this->_particles.get_primary_tag(particle_idx),
 						parent_edge, -999, -999
+					);
+				else if (track_intersect)       
+					func(before, after,
+						this->_particles.get_primary_tag(particle_idx),
+						parent_edge, child_edge_one, -child_edge_two 
 					);
 			}
 		}
