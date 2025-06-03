@@ -2,14 +2,82 @@ import numpy as np
 import mpl_toolkits
 import matplotlib.pyplot as plt
 import networkx as nx
-from mpl_toolkits.mplot3d import Axes3D 
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 """
 This script is a testing bench for the trajectories function. The goal is to
 plot the trajectories that are outputted from Nebula.
 """
 
-def construct_tree(dat):
+def read_tri_file(filename):
+    """
+    Read a .tri file and return triangles whose first two columns are >= 0.
+    Each line: m1 m2 x1 y1 z1 x2 y2 z2 x3 y3 z3
+    """
+    triangles_geom = []
+    triangles_detplane = []
+    
+    with open(filename, 'r') as f:
+        for line in f:
+            parts = line.strip().split()
+            if len(parts) != 11:
+                continue
+            m1, m2 = int(parts[0]), int(parts[1])
+            if m1 >= 0 or m2 >= 0:
+                coords = list(map(float, parts[2:]))
+                tri = np.array(coords).reshape(3, 3)
+                triangles_geom.append(tri)
+            elif m1 == -126 and m2 == -126:
+                coords = list(map(float, parts[2:]))
+                # reshape into 3 points of (x, y, z)
+                tri = np.array(coords).reshape(3, 3)
+                triangles_detplane.append(tri)
+                
+    return triangles_geom, triangles_detplane
+
+def plot_triangles(triangles_geom, triangles_detplane, x_range=None, y_range=None, z_range=None):
+    """
+    Plot a list of triangles in 3D, optionally restricting axis ranges.
+    x_range, y_range, z_range: tuple (min, max) or None to auto-scale.
+    """
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    poly = Poly3DCollection(triangles_geom, alpha=0.7)
+    poly.set_edgecolor('k')
+    ax.add_collection3d(poly)
+
+    poly = Poly3DCollection(triangles_detplane, alpha=0.5)
+    poly.set_edgecolor('r')
+    ax.add_collection3d(poly)
+
+    # Compute data bounds
+    all_pts = np.vstack(triangles_geom + triangles_detplane)
+    xmin, ymin, zmin = all_pts.min(axis=0)
+    xmax, ymax, zmax = all_pts.max(axis=0)
+
+    # Apply user-specified ranges or auto-scale
+    if x_range:
+        ax.set_xlim(x_range)
+    else:
+        ax.set_xlim(xmin, xmax)
+    if y_range:
+        ax.set_ylim(y_range)
+    else:
+        ax.set_ylim(ymin, ymax)
+    if z_range:
+        ax.set_zlim(z_range)
+    else:
+        ax.set_zlim(zmin, zmax)
+
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    plt.tight_layout()
+    plt.show()
+
+def construct_tree(dat, triangles_geom, triangles_detplane, x_range=None, y_range=None, z_range=None):
     """
     Function takes data from Nebula output, plots trajectories by going down the list of
     energy deposition nodes. It does this by:
@@ -104,12 +172,33 @@ def construct_tree(dat):
     XX, YY = np.meshgrid(xx, yy)
     ZZ = np.zeros_like(XX)    # z = 0 plane
 
-    # Plot a semitransparent brown surface
-    ax.plot_surface(XX, YY, ZZ,
-                    color='saddlebrown',   # or simply 'brown'
-                    alpha=0.4,             # adjust transparency (0=fully transparent, 1=opaque)
-                    linewidth=0,           # no mesh lines
-                    antialiased=True)
+    ###### Plot the sample geometry from the .tri file
+    poly = Poly3DCollection(triangles_geom, alpha=0.2)
+    poly.set_edgecolor('k')
+    ax.add_collection3d(poly)
+
+    poly = Poly3DCollection(triangles_detplane, alpha=0.1)
+    poly.set_edgecolor('r')
+    ax.add_collection3d(poly)
+
+    # Compute data bounds
+    all_pts = np.vstack(triangles_geom + triangles_detplane)
+    xmin, ymin, zmin = all_pts.min(axis=0)
+    xmax, ymax, zmax = all_pts.max(axis=0)
+
+    # Apply user-specified ranges or auto-scale
+    if x_range:
+        ax.set_xlim(x_range)
+    else:
+        ax.set_xlim(xmin, xmax)
+    if y_range:
+        ax.set_ylim(y_range)
+    else:
+        ax.set_ylim(ymin, ymax)
+    if z_range:
+        ax.set_zlim(z_range)
+    else:
+        ax.set_zlim(zmin, zmax)
 
     print(f'Number of inelastic scattering events: {inel_counter}')
     print(f'Number of elastic scattering events: {el_counter}')
@@ -161,35 +250,18 @@ if __name__ == "__main__":
         ('px', '=i'), ('py', '=i')]) # tags of primary electron
 
     ### Read output file
-    data = np.fromfile("with_bc_events_and_detections.det", dtype=trajectory_dtype)
-    #data = np.fromfile("output_terminate_at_Ef.det", dtype=trajectory_dtype)
+    data = np.fromfile("singleline_primaries_at_edge_19nm.det", dtype=trajectory_dtype)
 
     ### Process and prepare the data
-    one_traj = filter_one(data)
+    one_traj = filter_one(data, 1)
     print(one_traj)
-    #one_traj = filter_primary(one_traj)
-    #coordinates = one_traj[['x', 'y', 'z']]
-    #print(f'How many scattering events do we have? {len(one_traj)}')
-    #print(f'One trajectory data {one_traj}')
-    #print(f'What are the coordinates? {coordinates}')
-    print(f'How many detections? {one_traj[one_traj["ce1"] == -998]}')
+    #print(f'How many Lower than 0 nm? {one_traj[one_traj["z"] < 0]}')
+    #print(f'Any detected electrons: {one_traj[one_traj["ce1"] == -998]}')
+    #print(f'BC events: {one_traj[one_traj["ce1"] == -one_traj["ce2"]]}')
+    #print(f'Detection point {one_traj[one_traj["ce1"] == 455]}')
 
-    construct_tree(one_traj)
-    """
-    edges = prepare_edges(one_traj[['pe','ce1','ce2']])
-    print(f'Edges output from the prepare_edges function {edges}')
-
-    edges = edges[:4]
-    print(f'Raw data {data[:100]}')
-    print(f'Coordinates at positions 0, 71 in data {coordinates[0], coordinates[71]}')
-    print(f'Coordinates are {coordinates[:4]}')
-    print(f'Edges are {edges}')
-
-        
-    plot_trajectories(edges, coordinates)
-    """
-    raise NotImplementedError
-
+    t_geom, t_detplane = read_tri_file("single_40x20_line.tri")
+    construct_tree(one_traj, t_geom, t_detplane, y_range=[-40,40])
 
 
 """

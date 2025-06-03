@@ -49,10 +49,6 @@ trajectory_dtype = np.dtype([
         ('ce2', '=i')])# Child edge two 
 `
 
-Currently the function does not track the following events:
-- Boundary crossing events
-- Electron termination events
-
 Also included is a complementary script which processes the trajectories output data and plots them using matplotlib. The matplotlib plot is very slow since there are a lot of edges.
 
 ### Update 20-05-2025
