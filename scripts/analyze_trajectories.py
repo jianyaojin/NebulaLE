@@ -1,4 +1,5 @@
 import numpy as np
+import mpl_toolkits
 import matplotlib.pyplot as plt
 import networkx as nx
 from mpl_toolkits.mplot3d import Axes3D 
@@ -32,31 +33,36 @@ def construct_tree(dat):
     el_counter = 0
     bc_counter = 0
     term_counter = 0
+    
+    # Arrays to keep track of edge segments and colors
+    segs = []
+    colorsVertex = []
+    colorsEdge = []
 
     # Plot the rest
     for i in range(len(dat)):
-        
+
         # Distinguish between inelastic, elastic, boundary crossing and termination events
         if dat[i]['ce1'] == dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
             # Elastic is blue-ish
             el_counter += 1
-            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='mediumturquoise')
+            colorsVertex.append('mediumturquoise')
         elif dat[i]['ce1'] == -dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
             # Boundary crossing is green
             bc_counter += 1
-            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='lime')
+            colorsVertex.append('lime')
         elif dat[i]['ce1'] == -999:
             # Termination is red
             term_counter += 1
-            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='red')
+            colorsVertex.append('red')
         elif dat[i]['ce1'] == -998:
             # Detection is yellow
             bc_counter += 1
-            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='forestgreen')
+            colorsVertex.append('forestgreen')
         else:
             # Inelastic is orange
             inel_counter += 1
-            ax.scatter(dat[i]['x'],dat[i]['y'],dat[i]['z'], marker='.', color='orange')
+            colorsVertex.append('orange')
 
         # Plot the parent edge
         p_edge = dat[i]['pe']
@@ -79,7 +85,13 @@ def construct_tree(dat):
                 cl = 'darkgreen'
             else:
                 cl = 'teal'
-            ax.plot([x_parent, x_child], [y_parent, y_child], [z_parent, z_child], color=cl, linewidth=1)
+
+            segs.append(((x_parent, y_parent, z_parent), (x_child, y_child, z_child)))
+            colorsEdge.append(cl)
+
+    ln_coll = mpl_toolkits.mplot3d.art3d.Line3DCollection(segs,colors=colorsEdge,linewidth=1)
+    ax.add_collection(ln_coll)
+    ax.scatter(dat[:]['x'],dat[:]['y'],dat[:]['z'], marker='.', color=colorsVertex)
 
     # Optional visualization choices:
     # Draw material surface at z = 0
@@ -246,4 +258,3 @@ def prepare_edges(dat):
     
     return edges
 """
-
