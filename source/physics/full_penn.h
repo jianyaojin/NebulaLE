@@ -131,6 +131,9 @@ public:
 				// Update primary as well as edge tag
 				particle_mgr[particle_idx] = this_particle;
 				particle_mgr.update_edge_tag(particle_idx);
+				
+				// Update the counter for scattering events
+				particle_mgr.update_scatter_counter(particle_idx);
 
 
 				// Create secondary

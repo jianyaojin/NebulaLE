@@ -197,7 +197,7 @@ int main(int argc, char** argv)
 			});
 
 			// Flush output data
-			d.flush_detected([&detect_buff, &pixels](particle const & p, uint32_t t)
+			d.flush_detected([&detect_buff, &pixels](particle const & p, uint32_t t, size_t scatter_counts)
 			{
 				detect_buff.add(std::array<float, 7>{
 					p.pos.x, p.pos.y, p.pos.z,

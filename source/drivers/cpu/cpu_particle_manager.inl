@@ -35,6 +35,7 @@ auto cpu_particle_manager<material_manager_t>::push(
 			tags[i],
 			0,
 			nullptr,
+			0,
 			0
 		});
 
@@ -51,7 +52,7 @@ void cpu_particle_manager<material_manager_t>::flush_detected(detect_function fu
 	{
 		if (this_particle.status == DETECTED)
 		{
-			func(this_particle.particle_data, this_particle.primary_tag);
+			func(this_particle.particle_data, this_particle.primary_tag, this_particle.scatter_counter);
 			this_particle.status = TERMINATED;
 		}
 	}
@@ -166,6 +167,19 @@ PHYSICS void cpu_particle_manager<material_manager_t>::update_edge_tag(particle_
 }
 
 template<typename material_manager_t>
+PHYSICS void cpu_particle_manager<material_manager_t>::update_scatter_counter(particle_index_t i)
+{
+	particles[i].scatter_counter++;
+}
+
+template<typename material_manager_t>
+PHYSICS auto cpu_particle_manager<material_manager_t>::get_scatter_count(particle_index_t i) const
+-> size_t
+{
+	return particles[i].scatter_counter;
+}
+
+template<typename material_manager_t>
 PHYSICS triangle const * cpu_particle_manager<material_manager_t>::get_last_triangle(
 	particle_index_t i) const
 {
@@ -219,7 +233,8 @@ PHYSICS void cpu_particle_manager<material_manager_t>::create_secondary(
 		primary_tag,
 		cascades[primary_tag].next_secondary_tag++,
 		nullptr,
-		cascades[primary_tag].next_edge_tag++
+		cascades[primary_tag].next_edge_tag++,
+		particles[primary_idx].scatter_counter
 	});
 	++cascades[primary_tag].running_count;
 }

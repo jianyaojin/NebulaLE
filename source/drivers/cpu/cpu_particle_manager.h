@@ -58,6 +58,10 @@ public:
 	// Update the edge tag of a given particle. Also increment the next cascade edge tag
 	inline PHYSICS void update_edge_tag(particle_index_t i);
 
+	// Update or get the scatter counter of a given particle.
+	inline PHYSICS void update_scatter_counter(particle_index_t i);
+	inline PHYSICS size_t get_scatter_count(particle_index_t i) const;
+
 	// Get last intersected triangle for a particle (or nullptr)
 	inline PHYSICS triangle const * get_last_triangle(particle_index_t i) const;
 	inline PHYSICS void forget_last_triangle(particle_index_t i);
@@ -111,6 +115,7 @@ protected:
 		uint32_t secondary_tag;    // Unique tag for this electron in the primary's cascade
 		triangle* last_triangle; 
 		size_t edge_tag;           // Unique tag for each edge between scattering events. Since it is attached to an electron, the same electron may have many different edge_tags.
+		size_t scatter_counter;    // Counts the number of previous scattering events that brought this electron to its current point
 	};
 	std::vector<particle_struct> particles;
 

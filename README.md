@@ -63,3 +63,18 @@ Added functionality to track both boundary crossing and detection events.
 - Detection events are logged with the child edge ID -998 for both ce1 and ce2. Detection events here differ from those logged by the detector. Here we specifically log the boundary intersection event with a detector, after which the particle would normally be detected and saved.
 
 The python trajectory analysis script has been updated accordingly as well.
+
+
+### Update 23-09-2025
+
+Implemented the `nebula_cpu_SE_mode` functionality. The datatype here is given by:
+SE_mode_dtype = np.dtype([
+            ('x',  '=f'), ('y',  '=f'), ('z',  '=f'), # Position
+            ('dx', '=f'), ('dy', '=f'), ('dz', '=f'), # Direction
+            ('E',  '=f'),                             # Energy
+            ('sc', '=i'),                             # Scatter counter
+            ('px', '=i'), ('py', '=i')])              # Pixel index
+
+The only difference between SE mode and `nebula_cpu_mt` is that SE mode also outputs the "scatter counter", which counts the number of scattering events undergone by the electron before being detected (elastic and inelastic both). When a secondary is generated, the secondary inherits the scatter number of its parent electron (This is after it has been updated due to the scattering event)
+
+The use of this functionality is to be able to separate between SE1 electrons and SE2 electrons. The exact difference between the two is not clearly defined so that is left to the user to decide. 

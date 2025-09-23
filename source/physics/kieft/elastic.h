@@ -115,6 +115,9 @@ public:
 
 		// Update the new particle's edge tag and increment the edgetag count in cascades
 		particle_mgr.update_edge_tag(particle_idx);
+
+		// Update the counter for scattering events
+		particle_mgr.update_scatter_counter(particle_idx);
 	}
 
 	/**

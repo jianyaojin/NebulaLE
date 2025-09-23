@@ -17,6 +17,10 @@ add_executable(nebula_cpu_edep cpu_energydep.cpp
 add_executable(nebula_cpu_traj cpu_trajectories.cpp
 		$<TARGET_OBJECTS:io>
 		$<TARGET_OBJECTS:octree>)
+add_executable(nebula_cpu_SE_mode cpu_SE.cpp
+		$<TARGET_OBJECTS:io>
+		$<TARGET_OBJECTS:octree>)
 target_link_libraries(nebula_cpu_mt ${LIBRARIES} Threads::Threads)
 target_link_libraries(nebula_cpu_edep ${LIBRARIES} Threads::Threads)
 target_link_libraries(nebula_cpu_traj ${LIBRARIES} Threads::Threads)
+target_link_libraries(nebula_cpu_SE_mode ${LIBRARIES} Threads::Threads)

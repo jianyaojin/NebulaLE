@@ -33,7 +33,7 @@ using driver = nbl::drivers::simple_cpu_driver<
 int main(int argc, char** argv)
 {
 	// Print version information
-	std::clog << "This is Nebula version "
+	std::clog << "This is Nebula (SE function) version "
 		<< VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << "\n\n"
 		"Physics models:\n";
 	scatter_physics<false>::print_info(std::clog);
@@ -161,7 +161,7 @@ int main(int argc, char** argv)
 		driver d(
 			inter, materials, geometry,
 			energy_threshold, materials.get_max_energy(), seed);
-		output_buffer buff(out_file, 1024*(7*sizeof(float) + 2*sizeof(int)));
+		output_buffer buff(out_file, 1024*(7*sizeof(float) + 3*sizeof(int)));
 
 		for (;;)
 		{
@@ -185,8 +185,8 @@ int main(int argc, char** argv)
 				buff.add(std::array<float, 7>{
 					p.pos.x, p.pos.y, p.pos.z,
 					p.dir.x, p.dir.y, p.dir.z, p.kin_energy});
-				buff.add(std::array<int, 2>{
-					pixels[t].x, pixels[t].y});
+				buff.add(std::array<int, 3>{
+					static_cast<int>(scatter_counts), pixels[t].x, pixels[t].y});
 			});
 		}
 
