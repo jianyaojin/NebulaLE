@@ -195,6 +195,7 @@ int main(int argc, char** argv)
 
 	// Simulation
 	const auto n_threads = std::thread::hardware_concurrency();
+	// const auto n_threads = 1;
 	std::clog << "Creating " << n_threads << " CPU drivers" << std::endl;
 	std::vector<std::thread> threads;
 
