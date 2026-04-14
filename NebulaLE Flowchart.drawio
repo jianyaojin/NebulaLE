@@ -1,89 +1,98 @@
 <mxfile host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
-    <mxGraphModel dx="2204" dy="1168" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1276" dy="318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="fUe3NVcBme_qR7799I4q-1" connectable="0" parent="1" style="group" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-1" connectable="0" parent="1" style="group;fontSize=16;" value="" vertex="1">
           <mxGeometry height="470" width="870" x="20" y="1280" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-2" parent="fUe3NVcBme_qR7799I4q-1" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-2" parent="fUe3NVcBme_qR7799I4q-1" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;fontSize=13;" value="" vertex="1">
           <mxGeometry height="470" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-3" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=19;" value="Equations list (Denoted in flowchart with {i})" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-3" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=13;" value="Equations list (Denoted in flowchart with {i})" vertex="1">
           <mxGeometry height="40" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-4" edge="1" parent="fUe3NVcBme_qR7799I4q-1" source="fUe3NVcBme_qR7799I4q-3" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-3" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-4" edge="1" parent="fUe3NVcBme_qR7799I4q-1" source="fUe3NVcBme_qR7799I4q-3" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=13;" target="fUe3NVcBme_qR7799I4q-3" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="410" y="120" as="sourcePoint" />
             <mxPoint x="460" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-75" connectable="0" parent="1" style="group" value="" vertex="1">
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-111" parent="fUe3NVcBme_qR7799I4q-1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAKoAAAAqCAYAAAAjxsBaAAAJr0lEQVR4Xu2bBYxUSxOFC3d3dw0uwS1AcAkOwd0lBA9OAsGDW3B3Dw4J7hDc3d2d/39fJ3ezb5m5sjOzO/PoSiabzPbt7lt9uurU6Z4I//vHRJv2gJ97IIIGqp+vkJ6e8oAGqgZCQHhAAzUglklPUgNVYyAgPKCBGhDLpCepgaoxEBAe0EANiGXSk9RA1RgICA9ooAbEMulJaqB6EQMfPnyQ+fPnS9q0aaVq1aoSLVo0R71/+fJFTp48Ka9evVKf5MmTS/Xq1R314cvGDx8+lLdv30rUqFHVB/v+/bv6xI8fX1KnTh00PN9du3ZN+YDPr1+/5Nu3bxI7dmxJkyaN42lqoDp2mfkDU6ZMkT59+iiwHj58WJImTWp7hKtXr0rdunXl1q1b8uPHD6lfv76sXLnS9vO+blinTh25cOGCAFhAhyVOnFiSJUsm1apVkzFjxgRNYefOndKqVSt5+vRp0Hfx4sWTihUryurVqx1PVQPVscusH+jQoYPMnTtX2rdvL7NmzbJ+IEQLFrJx48Z+B1RjmrzfvHnzJEWKFHL9+nWJGTOm23ecPn26dO/eXWWaFi1aOPaF8YAGaqhd5/5B0neRIkUkbty4KqJEjx7d0ShHjhyRUqVK+S1Q8+bNKxcvXlQbcebMmabvtn79epkxY4bs2bPHkQ9CNtZA9ch97h/Oli2b3LhxQ1atWqUA58SOHj0qJUuW9Eugwp1J9Vy6W7ZsmTRq1Mj01Xr27Cnp0qWTXr16OXHBH201UD1yn/uHR4wYIcOGDZOaNWvKxo0bHY3iz0AlQhob79GjR6rgMzOi78KFCyV//vyOfKAjqkfusv/wzZs3hagaJUoUefz4sSRMmND2w+EBVCJlokSJLOfYo0cPmTZtmmTJkkUo/syMPvHBixcvJEKECJZ9mzXwOKI+efJEJk6cqDjL58+fJWPGjDJ48GD192+3okWLyokTJxRH69ixo213WAEVqQef79q1S5C0kILSp08vnTp1knLlyrkchzZEtn379ilVIWvWrEJaJiqOGzdO3r9/L3HixBH4sVWEZK3btWtnWSgSfRcvXuw4o7ga3yOgnjt3TqW23r17S5s2bZRGdvr0aVXdHT9+XGLFimV7cf6LDadOnSpEoBIlSsjBgwdtv6IZUAEWvDBSpEiybt26oCi4bds29T3gGzly5L/GAoS1atWSBw8eyKZNmxRnnDx5sgwdOlSKFSumCp3Zs2fLgAED5NmzZwqwrswpP+3WrZtkypRJzclT8wioVLbsZAoGw9ARAe7mzZulSpUqlvNbtGiRcpgnlj17dtmxY4cnXfjk2efPnysRnAhIFMNXdswMqGXKlFF9Xbly5Q9AEb3QLufMmaMCh2H9+/dXUXP58uXSsGHDoO9z5Mght2/flrNnz0rOnDnl69evpgrFhg0bpF69eup5tFTkKTPLnTu3LFmyRPLly2fntU3bhBqoRvpo0qSJmoxhbdu2lfPnz8vu3bvVaYWVsYOt0o1VH1ShxYsXt2oW5v+/f/++KiLevHkjo0aNkoEDB9qagzugol2iYZLi4YkhDRGeAwZ4MadCBuckqt29e1etS65cuYIe43CBQg8aQeS3Mif8FF7KRvAGP2VeoQYqi5AhQwZFkhs0aKBOJipVqqROKvzZOFlhET0xIgVFgpnhH/gi0YRIxKJdunTJ1rDugFq5cmUVAMhaXbp0cdkX4/GOnGhRnSMjcSL06dMnNT7ZxzD+D48k7RNgrMzom7Y8Y2Zr1qxREZx394aFGqgM3rRpU1mxYkXQPOBN7LqxY8d6XOV54+Vc9cHcDhw44FH3AIbTFnd27949BdJmzZpJ3759lYQDUE6dOiUFChSwHNsdUFOmTKk4pJl+WaFCBdm/f78MGjRIkMiwGjVqyPbt2xVoqCkMQzqCQqBKWAUYskKSJEkU8JcuXapOzsyMqM+msBOpLR3yTwOPgPr792+VOpg4O52qH5s0aZLpQtqZWKC2MUAKfzc2MYAFXIjeEyZMsHw1d0AlMn78+FFRLSiXKytfvrzaiBQwxlgUYJkzZ1Y8dO/evYqSLViwQFXuFFVdu3a1nBPFsUGvkKWQp9wZSgR8/MyZM5IqVSrLvu00CBVQuSVEdV+2bNmgMeBHpAMWAxpAMWXHOBPv16+fnaZu25BWuQAS3gYPJJISQYlqxtEpMhJRmOKDyjtixIimU3UHVI5V4fOAi4ralRGx4aJIUWwQjGjKWTuFHUCNESOGAi1REbpmx1AtWO/IkSOrgET2dGesKZdS1q5da6drW20cAxVAIm9AktEICxYs+K+BkKigBHYvY5BS2HmeGAUEvDE8zQApqZHoQ4FnGJmHyELaBrSkZzNzB9Thw4erdN66dWt16SWkEW2hBz9//lQpnXXCiK6Mz62u0Bp9J0iQQG2yd+/euVUHKLJLly4tyGXeqPaN+ToGKlJGoUKFFDC4fEGFaRgcDF2Ov/Cfv8Xu3LmjIimb7tChQy43DWChCGrevLmKdmZGdmCxkYKCS38ECRb/5cuX6lQo5EmScVNp9OjRihsbNmTIENUPFA0FALChcQdfOztrZfBfDg2QyUIaFIN7uKgbwWUwO31btXEMVDqEf6HL4UzDSDc4tmXLlorI/y0GDcqTJ4/SFeHr0B5XBlUqXLiw0j4pXlwdhhC1jh07Jlu3bhUOC+CV8EzABb3BqOjxM5mL4oh7r5w6wYEpYNgIZLPg9OLy5ctqzYwawpgfQKVfDgMoeoiYZsaVPuQ2ojYUgrExdGIqfADKpoD7ettCBVSEbLgokQS+8/r1a/WSSCZoc3+Twd0oYOCNnTt3Nn11QESBhW7pimMCBI5ajVvxpHCiKNE6uAYL4KAAnCihJtCGI1H8T4Uf0thAFExIalTuUBEKHk6akOq4tU+GpD+r6h9KwXuSOdigzBXZi+Nirvz56ug8VEAN7ghuojtNIf81IAMUuz87IfpRkFgVVHZ9RDQzK2zQSTlaJV1zdTCksX5Eb/grR692DyWgOdBALk1DR5zeubX7fkY7j4HqdEDdPmw9QFUPPbE6/UNOIqpu2bIlbCdoczQNVJuOCtRm8EXAR6HjLvICZCQ11BqrE6fw8oMGanh5PozGhffWrl1bcVPuCoQU6rmyRwFsKBZWF03CaNp/DKOBGl6eD8NxuRU1fvx49etPoipqAnovIOZnz9zVoLijMPZX00D115Xx0bxQCfjBIcUc6d6fwRncBRqoPgKE7ta7HtBA9a4/dW8+8oAGqo8cq7v1rgc0UL3rT92bjzyggeojx+puvesBDVTv+lP35iMPaKD6yLG6W+964P+pKxjOWZ8SfwAAAABJRU5ErkJggg==;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="42" width="170" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-112" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;fontStyle=5" value="Equation {1}:" vertex="1">
+          <mxGeometry height="30" width="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-113" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Here s is the sampled path, lambda is the mean free path for a given electron energy, and U is drawn from a uniform distribution. For the derivation refer to the thesis of A. Theulings or T. Verduin, but essentially the probability an electron remains unscattered decreases exponentially as it travels through a material.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="670" x="190" y="61" as="geometry" />
+        </mxCell>
+        <mxCell id="fUe3NVcBme_qR7799I4q-75" connectable="0" parent="1" style="group;fontSize=16;" value="" vertex="1">
           <mxGeometry height="470" width="870" x="20" y="1760" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-76" parent="fUe3NVcBme_qR7799I4q-75" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-76" parent="fUe3NVcBme_qR7799I4q-75" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;fontSize=13;" value="" vertex="1">
           <mxGeometry height="470" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-77" parent="fUe3NVcBme_qR7799I4q-75" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=19;" value="References" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-77" parent="fUe3NVcBme_qR7799I4q-75" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=13;" value="References" vertex="1">
           <mxGeometry height="40" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-78" edge="1" parent="fUe3NVcBme_qR7799I4q-75" source="fUe3NVcBme_qR7799I4q-77" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-77" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-78" edge="1" parent="fUe3NVcBme_qR7799I4q-75" source="fUe3NVcBme_qR7799I4q-77" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=13;" target="fUe3NVcBme_qR7799I4q-77" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="410" y="120" as="sourcePoint" />
             <mxPoint x="460" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-91" connectable="0" parent="1" style="group" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-91" connectable="0" parent="1" style="group;fontSize=16;" value="" vertex="1">
           <mxGeometry height="400" width="870" x="20" y="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-92" parent="fUe3NVcBme_qR7799I4q-91" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-92" parent="fUe3NVcBme_qR7799I4q-91" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=13;" value="" vertex="1">
           <mxGeometry height="400" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-93" parent="fUe3NVcBme_qR7799I4q-91" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=19;" value="Remarks" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-93" parent="fUe3NVcBme_qR7799I4q-91" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=13;" value="Remarks" vertex="1">
           <mxGeometry height="40" width="870" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-94" edge="1" parent="fUe3NVcBme_qR7799I4q-91" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-94" edge="1" parent="fUe3NVcBme_qR7799I4q-91" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=13;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint y="40" as="sourcePoint" />
             <mxPoint x="870" y="40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-139" parent="fUe3NVcBme_qR7799I4q-91" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;- Note that in the current version, the energy deposition mode only counts energy lost by the primary. However, secondaries generated by this energy loss will still be tracked by the simulation and, should they undergo energy deposition events, the energy loss there will too. This effectively means that a portion of the energy lost by the primary is double counted. A fix exists but has not been pulled into main yet.&lt;/font&gt;" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-139" parent="fUe3NVcBme_qR7799I4q-91" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;font&gt;- Note that in the current version, the energy deposition mode only counts energy lost by the primary. However, secondaries generated by this energy loss will still be tracked by the simulation and, should they undergo energy deposition events, the energy loss there will too. This effectively means that a portion of the energy lost by the primary is double counted. A fix exists but has not been pulled into main yet.&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="850" x="10" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-108" parent="1" style="html=1;whiteSpace=wrap;" value="&lt;div&gt;User Command Line Initiation&lt;/div&gt;&lt;div&gt;&lt;b&gt;` &amp;lt;nebula_version&amp;gt; &amp;lt;.tri file&amp;gt; &amp;lt;.pri file&amp;gt; &amp;lt;.mat file 1&amp;gt; &amp;lt;.mat file 2&amp;gt; ... ... &amp;gt;&amp;gt; &amp;lt;output binary .det file&amp;gt; `&lt;/b&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="320" x="1065" y="1100" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-108" parent="1" style="html=1;whiteSpace=wrap;fontSize=13;" value="&lt;div&gt;User Command Line Initiation&lt;/div&gt;&lt;div&gt;&lt;b&gt;` &amp;lt;nebula_version&amp;gt; &amp;lt;.tri file&amp;gt; &amp;lt;.pri file&amp;gt; &amp;lt;.mat file 1&amp;gt; &amp;lt;.mat file 2&amp;gt; ... ... &amp;gt;&amp;gt; &amp;lt;output binary .det file&amp;gt; `&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="1335" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-109" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=12;align=center;shape=mxgraph.ios7ui.horLines;" value="&lt;div&gt;Material .mat file(s)&lt;/div&gt;&lt;div&gt;corresponding to sample&lt;/div&gt;" vertex="1">
-          <mxGeometry height="50" width="187.5" x="930" y="970" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-109" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=13;align=center;shape=mxgraph.ios7ui.horLines;" value="&lt;div&gt;Material .mat file(s)&lt;/div&gt;&lt;div&gt;corresponding to sample&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="187.5" x="1200" y="970" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-110" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=12;align=center;shape=mxgraph.ios7ui.horLines;" value="Sample geometry .tri file" vertex="1">
-          <mxGeometry height="50" width="187.5" x="1131.25" y="900" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-110" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=13;align=center;shape=mxgraph.ios7ui.horLines;" value="Sample geometry .tri file" vertex="1">
+          <mxGeometry height="50" width="187.5" x="1401.25" y="900" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-111" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=12;align=center;shape=mxgraph.ios7ui.horLines;" value="Primary electron .pri file" vertex="1">
-          <mxGeometry height="50" width="187.5" x="1330" y="970" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-111" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=13;align=center;shape=mxgraph.ios7ui.horLines;" value="Primary electron .pri file" vertex="1">
+          <mxGeometry height="50" width="187.5" x="1600" y="970" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-112" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-109" style="endArrow=classic;html=1;rounded=0;exitX=0.494;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-108" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-112" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-109" style="endArrow=classic;html=1;rounded=0;exitX=0.494;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="fUe3NVcBme_qR7799I4q-108" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1140" y="1066" as="sourcePoint" />
-            <mxPoint x="1190" y="1016" as="targetPoint" />
+            <mxPoint x="1410" y="1066" as="sourcePoint" />
+            <mxPoint x="1460" y="1016" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-113" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-110" style="endArrow=classic;html=1;rounded=0;exitX=0.508;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-108" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-113" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-110" style="endArrow=classic;html=1;rounded=0;exitX=0.508;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="fUe3NVcBme_qR7799I4q-108" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1160" y="1090" as="sourcePoint" />
-            <mxPoint x="1270" y="1169" as="targetPoint" />
+            <mxPoint x="1430" y="1090" as="sourcePoint" />
+            <mxPoint x="1540" y="1169" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-114" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-111" style="endArrow=classic;html=1;rounded=0;exitX=0.52;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-108" value="">
+        <mxCell id="fUe3NVcBme_qR7799I4q-114" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-111" style="endArrow=classic;html=1;rounded=0;exitX=0.52;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="fUe3NVcBme_qR7799I4q-108" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1272" y="1040" as="sourcePoint" />
-            <mxPoint x="1270" y="1187" as="targetPoint" />
+            <mxPoint x="1542" y="1040" as="sourcePoint" />
+            <mxPoint x="1540" y="1187" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-151" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=15;" value="CPU Version" vertex="1">
-          <mxGeometry height="220" width="230" x="1490" y="1200" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-151" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU Version" vertex="1">
+          <mxGeometry height="220" width="230" x="1760" y="1200" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-152" parent="fUe3NVcBme_qR7799I4q-151" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="The main CPU mode for Nebula outputs:" vertex="1">
           <mxGeometry height="40" width="230" y="30" as="geometry" />
@@ -100,18 +109,18 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-159" parent="fUe3NVcBme_qR7799I4q-151" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="- Pixel location from which the primary that generated the detected electron originated from (px, py)" vertex="1">
           <mxGeometry height="60" width="230" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-155" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.003;entryY=0.074;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-151">
+        <mxCell id="fUe3NVcBme_qR7799I4q-155" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.003;entryY=0.074;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-151">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="1630" y="1378" as="sourcePoint" />
-            <mxPoint x="1828" y="1190" as="targetPoint" />
+            <mxPoint x="1900" y="1378" as="sourcePoint" />
+            <mxPoint x="2098" y="1190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-156" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="nebula_cpu_mt" vertex="1">
-          <mxGeometry height="30" width="140" x="1288" y="1220" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-156" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_mt" vertex="1">
+          <mxGeometry height="30" width="140" x="1558" y="1220" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-160" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=15;" value="CPU Edep Version" vertex="1">
-          <mxGeometry height="250" width="230" x="1490" y="1430" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-160" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU Edep Version" vertex="1">
+          <mxGeometry height="250" width="230" x="1760" y="1430" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-161" parent="fUe3NVcBme_qR7799I4q-160" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="The CPU energy deposition mode outputs:" vertex="1">
           <mxGeometry height="40" width="230" y="30" as="geometry" />
@@ -128,18 +137,18 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-165" parent="fUe3NVcBme_qR7799I4q-160" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="- The pixel from which the primary electron involved in this collision belonged to, (px, py)" vertex="1">
           <mxGeometry height="60" width="230" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-166" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.003;entryY=0.086;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-160">
+        <mxCell id="fUe3NVcBme_qR7799I4q-166" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.003;entryY=0.086;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-160">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="1430" y="1270" as="sourcePoint" />
-            <mxPoint x="1694" y="1306" as="targetPoint" />
+            <mxPoint x="1700" y="1270" as="sourcePoint" />
+            <mxPoint x="1964" y="1306" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-167" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="nebula_cpu_edep" vertex="1">
-          <mxGeometry height="30" width="140" x="1288" y="1460" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-167" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_edep" vertex="1">
+          <mxGeometry height="30" width="140" x="1558" y="1460" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-168" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=15;" value="CPU Trajectories Version" vertex="1">
-          <mxGeometry height="440" width="230" x="1490" y="1690" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-168" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU Trajectories Version" vertex="1">
+          <mxGeometry height="440" width="230" x="1040" y="1230" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-169" parent="fUe3NVcBme_qR7799I4q-168" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="The trajectories mode outputs additional information per energy loss event. Scattering events are seen as nodes and the lines that connect them are edges." vertex="1">
           <mxGeometry height="90" width="230" y="30" as="geometry" />
@@ -162,34 +171,36 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-177" parent="fUe3NVcBme_qR7799I4q-168" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="- The unique tag of the two child edges leading away from the scattering event. One for the deflected primary and another for the generated secondary." vertex="1">
           <mxGeometry height="90" width="230" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-174" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.045;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-168">
+        <mxCell id="fUe3NVcBme_qR7799I4q-174" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.999;entryY=0.037;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-168">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="1225" y="1440" as="sourcePoint" />
-            <mxPoint x="1694" y="1566" as="targetPoint" />
+            <mxPoint x="1495" y="1440" as="sourcePoint" />
+            <mxPoint x="1964" y="1566" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-175" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="nebula_cpu_traj" vertex="1">
-          <mxGeometry height="30" width="140" x="1288" y="1720" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-175" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_traj" vertex="1">
+          <mxGeometry height="30" width="140" x="1320" y="1260" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-179" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-177" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fUe3NVcBme_qR7799I4q-180">
+        <mxCell id="fUe3NVcBme_qR7799I4q-179" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-177" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.272;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-181">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-            <mxPoint x="1750" y="2068" as="sourcePoint" />
-            <mxPoint x="1780" y="2000" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1350" y="1625" />
+            </Array>
+            <mxPoint x="2020" y="2068" as="sourcePoint" />
+            <mxPoint x="2050" y="2000" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-182" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="150" width="500" x="1770" y="1935" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-182" connectable="0" parent="1" style="group;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="150" width="500" x="1198" y="1800" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-180" parent="fUe3NVcBme_qR7799I4q-182" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" value="" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-180" parent="fUe3NVcBme_qR7799I4q-182" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;fontSize=13;" value="" vertex="1">
           <mxGeometry height="140" width="500" y="5" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-181" parent="fUe3NVcBme_qR7799I4q-182" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;br&gt;&lt;div&gt;Special events are identified by custom child edge IDs.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Termination events have no child edges and so have both values equal to -999.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Boundary crossing events are similar to elastic scattering events and so are &lt;br&gt;distinguished by having child edge 2 ID equal to -1 * child edge 1 ID.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Detection events have both child edge IDs as -998.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="fUe3NVcBme_qR7799I4q-181" parent="fUe3NVcBme_qR7799I4q-182" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;br&gt;&lt;div&gt;Special events are identified by custom child edge IDs.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Termination events have no child edges and so have both values equal to -999.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Boundary crossing events are similar to elastic scattering events and so are &lt;br&gt;distinguished by having child edge 2 ID equal to -1 * child edge 1 ID.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Detection events have both child edge IDs as -998.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="450" x="30" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-183" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=15;" value="CPU SE Version" vertex="1">
-          <mxGeometry height="310" width="230" x="1490" y="2140" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-183" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU SE Version" vertex="1">
+          <mxGeometry height="310" width="230" x="1760" y="1690" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-184" parent="fUe3NVcBme_qR7799I4q-183" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="The SE mode is mostly the same as the standard CPU version, but it also outputs the number of times a detected electron has scattered before being detected. Output format is:" vertex="1">
           <mxGeometry height="100" width="230" y="30" as="geometry" />
@@ -209,31 +220,267 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-205" parent="fUe3NVcBme_qR7799I4q-183" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="- Pixel location from which the primary that generated the detected electron originated from (px, py)" vertex="1">
           <mxGeometry height="60" width="230" y="250" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-191" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=15;" value="GPU Version" vertex="1">
-          <mxGeometry height="110" width="230" x="1720" y="1030" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-191" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="GPU Version" vertex="1">
+          <mxGeometry height="110" width="230" x="1990" y="1030" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-192" parent="fUe3NVcBme_qR7799I4q-191" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=13;" value="The GPU mode functions in theory in the same way as the CPU, with more parallelization and thus better runtime." vertex="1">
           <mxGeometry height="80" width="230" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-197" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.16;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-191">
+        <mxCell id="fUe3NVcBme_qR7799I4q-197" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.16;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-191">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="1500" y="1180" as="sourcePoint" />
-            <mxPoint x="1764" y="1216" as="targetPoint" />
+            <mxPoint x="1770" y="1180" as="sourcePoint" />
+            <mxPoint x="2034" y="1216" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-198" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="nebula_gpu" vertex="1">
-          <mxGeometry height="30" width="140" x="1570" y="1055" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-198" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_gpu" vertex="1">
+          <mxGeometry height="30" width="140" x="1840" y="1055" as="geometry" />
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-200" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.004;entryY=0.03;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-183">
+        <mxCell id="fUe3NVcBme_qR7799I4q-200" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.004;entryY=0.03;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fUe3NVcBme_qR7799I4q-183">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="1030" y="1850" as="sourcePoint" />
-            <mxPoint x="1295" y="2380" as="targetPoint" />
+            <mxPoint x="1300" y="1850" as="sourcePoint" />
+            <mxPoint x="1565" y="2380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fUe3NVcBme_qR7799I4q-201" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="nebula_cpu_SE_mode" vertex="1">
-          <mxGeometry height="30" width="140" x="1288" y="2166" as="geometry" />
+        <mxCell id="fUe3NVcBme_qR7799I4q-201" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_SE_mode" vertex="1">
+          <mxGeometry height="30" width="140" x="1558" y="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-1" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-168" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0;exitY=0.045;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="1250" />
+              <mxPoint x="960" y="2094" />
+              <mxPoint x="1714" y="2094" />
+            </Array>
+            <mxPoint x="1450" y="2000" as="sourcePoint" />
+            <mxPoint x="1714" y="2519" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-2" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-151" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.991;exitY=0.068;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.012;entryY=0.13;entryDx=0;entryDy=0;entryPerimeter=0;" target="SQ9sBJwUYBfkxu-uvdz8-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2050" y="1220" as="sourcePoint" />
+            <mxPoint x="2170" y="1215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-13" parent="1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=13;" value="&lt;b&gt;Initialization&lt;/b&gt;" vertex="1">
+          <mxGeometry height="150" width="190" x="2110" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-14" parent="SQ9sBJwUYBfkxu-uvdz8-13" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="Electrons specified in the .pri file are loaded into available CPU cores. They each contain particle information (Kinetic energy, direction, and current position) as well as a tag which identifies them as the nth primary electron." vertex="1">
+          <mxGeometry height="120" width="190" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-17" parent="1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=13;" value="&lt;b&gt;simulate_to_end (simple_cpu_driver.h)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="190" width="320" x="2340" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-18" parent="SQ9sBJwUYBfkxu-uvdz8-17" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="- While there are still particles labelled &quot;active&quot;, the simulator loops between the following three functions in order:" vertex="1">
+          <mxGeometry height="60" width="320" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-20" parent="SQ9sBJwUYBfkxu-uvdz8-17" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="- init" vertex="1">
+          <mxGeometry height="30" width="320" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-21" parent="SQ9sBJwUYBfkxu-uvdz8-17" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="- intersect" vertex="1">
+          <mxGeometry height="30" width="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-22" parent="SQ9sBJwUYBfkxu-uvdz8-17" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="- scatter" vertex="1">
+          <mxGeometry height="40" width="320" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-19" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-13" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1.001;exitY=0.112;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.091;entryDx=0;entryDy=0;entryPerimeter=0;" target="SQ9sBJwUYBfkxu-uvdz8-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2320" y="1220" as="sourcePoint" />
+            <mxPoint x="2440" y="1245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-23" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-17" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.496;entryY=-0.01;entryDx=0;entryDy=0;entryPerimeter=0;" target="SQ9sBJwUYBfkxu-uvdz8-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2540" y="1470" as="sourcePoint" />
+            <mxPoint x="2500" y="1450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-25" parent="1" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;fontFamily=Verdana;fontSize=13;align=center;shape=mxgraph.ios7ui.horLines;" value="Flush the results into .det file" vertex="1">
+          <mxGeometry height="50" width="210" x="2395" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-28" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-20" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2780" y="1325" />
+              <mxPoint x="2780" y="920" />
+              <mxPoint x="3235" y="920" />
+            </Array>
+            <mxPoint x="2880" y="1330" as="sourcePoint" />
+            <mxPoint x="2760" y="982" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-45" parent="1" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="init (cpu_driver.inl)" vertex="1">
+          <mxGeometry height="1020" width="962" x="2810" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-46" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle information is retrieved from memory" vertex="1">
+          <mxGeometry height="40" width="160" x="215.3675" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-47" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle isn&#39;t in simulation domain: Set next event as Terminate &amp;amp; &lt;b&gt;EXIT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="139.23" x="20" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-48" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-46" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-49" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle is in simulation domain" vertex="1">
+          <mxGeometry height="60" width="122.24" x="448.495" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-50" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-46" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-49" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-57" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle is not in vacuum (It is in a material). Its (kinetic) energy must be above the inner potential with respect to the bottom of the valence band, or lower than the maximum interesting energy (by default 50 keV)" vertex="1">
+          <mxGeometry height="110" width="280" x="199.23000000000002" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-58" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-49" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-57" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-415.2787500000006" y="180" as="sourcePoint" />
+            <mxPoint x="-335.2787500000006" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-51" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle is in vacuum. The next scatter event distance is set to infinity.&amp;nbsp;" vertex="1">
+          <mxGeometry height="69.5" width="300.77" x="519.23" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-56" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-49" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-51" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-438.0287500000006" y="140" as="sourcePoint" />
+            <mxPoint x="-358.0287500000006" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-63" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle is outside these bounds. Set next event as Terminate &amp;amp; &lt;b&gt;EXIT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="143.15" x="39.46100000000007" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-64" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-57" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-63" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-268.7787500000006" y="280" as="sourcePoint" />
+            <mxPoint x="-475.2787500000006" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-65" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle is within these limits. We sample the next scattering event!" vertex="1">
+          <mxGeometry height="80" width="174.14" x="464.85900000000004" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-66" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-57" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-65" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62.221249999999486" y="339.5" as="sourcePoint" />
+            <mxPoint x="-365.2787500000005" y="319.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-69" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="The particle is moved to the position of the next scattering event, unless there is a material boundary in the way.&amp;nbsp;" vertex="1">
+          <mxGeometry height="106" width="213.38" x="162.0490000000001" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-70" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-65" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-69" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40.471249999999486" y="495" as="sourcePoint" />
+            <mxPoint x="-285.2787500000005" y="474.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-73" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-51" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-69" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="252.5462499999996" y="490" />
+            </Array>
+            <mxPoint x="215.14124999999956" y="299.5" as="sourcePoint" />
+            <mxPoint x="215.14124999999956" y="349.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-78" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-69" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-79" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2947.47125" y="1455" as="sourcePoint" />
+            <mxPoint x="2614.72125" y="1469.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-79" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="If there is no material boundary in the way, set the next event as scatter, teleport the particle to the location of that event &amp;amp;&amp;nbsp;&lt;b&gt;EXIT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="94" width="224.33" x="45.67" y="686" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-80" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-69" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-81" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2947.47125" y="1455" as="sourcePoint" />
+            <mxPoint x="2614.72125" y="1469.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-81" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="whiteSpace=wrap;html=1;fontSize=13;" value="If there is a material boundary in the way, set the next event as intersect, teleport the particle to the location of that event &amp;amp;&amp;nbsp;&lt;b&gt;EXIT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="94" width="218.9" x="301.1" y="686" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-92" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-65" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-94" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="536.4712499999996" y="425" />
+            </Array>
+            <mxPoint x="74.47124999999949" y="425" as="sourcePoint" />
+            <mxPoint x="-19.528750000000514" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-94" parent="SQ9sBJwUYBfkxu-uvdz8-45" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="sample_path (scatter_list.h)" vertex="1">
+          <mxGeometry height="470" width="410" x="531.8090000000001" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-95" parent="SQ9sBJwUYBfkxu-uvdz8-94" style="whiteSpace=wrap;html=1;fontSize=13;" value="All possible different scattering events are specified in a scatter_list in the code. By default for example, we have inelastic (with index 1) and elastic scattering (with index 2)." vertex="1">
+          <mxGeometry height="70" width="360.38" x="24.810000000000002" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-98" parent="SQ9sBJwUYBfkxu-uvdz8-94" style="whiteSpace=wrap;html=1;fontSize=13;" value="The simulator retrieves the inverse mean free path for a given electron energy and samples a path according to equation {1}" vertex="1">
+          <mxGeometry height="60" width="370" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-99" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-94" source="SQ9sBJwUYBfkxu-uvdz8-95" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-98" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-114" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-94" source="SQ9sBJwUYBfkxu-uvdz8-98" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-115" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3514.2324999999996" y="1630" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-115" parent="SQ9sBJwUYBfkxu-uvdz8-94" style="whiteSpace=wrap;html=1;fontSize=13;" value="The simulator loads the sampled path of the first scattering event (index 1), then it goes down the list. If any subsequent scattering event has a shorter sampled path, it replaces the loaded scattering event with the new one." vertex="1">
+          <mxGeometry height="80" width="358.11" x="25.944999999999993" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-116" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-94" source="SQ9sBJwUYBfkxu-uvdz8-115" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-117" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3482.875" y="1710" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-117" parent="SQ9sBJwUYBfkxu-uvdz8-94" style="whiteSpace=wrap;html=1;fontSize=13;" value="Once the whole list has been traversed, the function outputs the chosen scattering event." vertex="1">
+          <mxGeometry height="50" width="358.11" x="25.944999999999993" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-104" parent="1" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="intersect (cpu_driver.inl)" vertex="1">
+          <mxGeometry height="600" width="620" x="3120" y="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-105" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle&#39;s next event is retrieved" vertex="1">
+          <mxGeometry height="60" width="170" x="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-106" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the next event is scatter, this function does nothing and just&amp;nbsp;&lt;b&gt;EXITs&lt;/b&gt;" vertex="1">
+          <mxGeometry height="100" width="200" x="20" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-107" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-105" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-106" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-108" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the next event is intersect, perform an intersection event" vertex="1">
+          <mxGeometry height="90" width="160" x="350" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-109" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-105" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-108" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-118" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="swimlane;startSize=40;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="boundary_intersect.execute (boundary_intersect.h)" vertex="1">
+          <mxGeometry height="290" width="340" x="260" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-119" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Retrieves particle direction and the normal of the interface &quot;triangle&quot; that it has just intersected. Calculate the angle of direction of motion between the particle and the triangle&#39;s normal." vertex="1">
+          <mxGeometry height="90" width="300" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-120" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Determine which material the particle is about to leave and which material the particle is about to enter." vertex="1">
+          <mxGeometry height="70" width="290" x="25" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-121" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-119" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="SQ9sBJwUYBfkxu-uvdz8-120" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-125" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-108" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-118" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345.2499999999999" y="190" as="sourcePoint" />
+            <mxPoint x="465.2499999999999" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-110" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-45" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-104" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3300" y="2060" as="sourcePoint" />
+            <mxPoint x="3414" y="2190" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
