@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
-    <mxGraphModel dx="1276" dy="318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="943" dy="-331" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -27,6 +27,27 @@
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-113" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Here s is the sampled path, lambda is the mean free path for a given electron energy, and U is drawn from a uniform distribution. For the derivation refer to the thesis of A. Theulings or T. Verduin, but essentially the probability an electron remains unscattered decreases exponentially as it travels through a material.&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="670" x="190" y="61" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-31" parent="fUe3NVcBme_qR7799I4q-1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAPYAAAB/CAYAAADcrT/YAAAes0lEQVR4Xu2dCfgV0xvHj7+izVKJspRQSkp7ITttkrSIIllK2iMiJCkhVCq0oKiklOxbUSmhVYVWyVYohBbZ/j7nec7PNM3cWe6d+d17f+/7PL/H/989M2fmPfM9593f/f75l5SQcEA4kFUc2E+AnVXrKS8jHNAcEGDLhyAcyEIOCLCzcFHllYQDAmz5BoQDWcgBAXYWLqq8knBAgB3jN/DXX3+pWbNmqQIFCsQ4q0yVbRw466yzPF9JgO3JotQNuPfeexV/O3bsSN1N5U55jgN+PNQC7Bg/i5NPPlmVLVtW3XTTTTHOKlNlGwfOPvtsz1cSYHuyKDUD1q5dqypWrKimTZummjdvnpqbyl2EAy4cEGDH9Gk88MAD6u6771Y//PCDKlSoUEyzyjR5lQMC7JhW/rTTTlOHH364mjlzZkwzyjR5mQMC7BhWf/PmzeqYY45R48aNU+3bt49hRpkir3NAgB3DF/D444+r7t27KwBevHjxGGbMu1NgMf7tt9/UQQcdlHeZ8O+bC7BjWP6GDRuqPXv2qHfeeSeG2fL2FK1atVIffvih+vjjj1XRokV9MWPw4MFq69atOr5g//33V7t371a///676tmzp/ZiGOrfv792VTLujz/+UMQl3HPPPWkZlyDA9rX04Qdt375dHXHEEQrjGae2UHQcmDNnjjrvvPP0BIDyoYce8jXZRx99pBYvXqy6du2qx99yyy0Km8i5556rihQpknOPN998U40dO1bNmDFDXXvtter8889Xl156qdpvv/18zRPnIAF2xNyePHmyuvLKK9XGjRtV6dKlI54tb9++du3aqkmTJoqT9cADD1SffvrpXiduIu7MnTtXnXPOOapcuXJqzZo1rkNffvll9eijj6rXX389rZktwI54edjRP//8c30iCEXHATbQF198UT333HOqUaNGitMV3k+ZMsXXpLgi+evYsaPCJuJGt956qzrppJNUu3btfN03twYJsCPkPHpaiRIltGh3xx13RDhT3r41fK5SpYo+RY877ji1atUqVa1aNfX333+r999/X9WpU8eTQZzWnNpsEJdddpnr+DPOOENNnDhRlSlTxvOeuTlAgB0h91955RXVtGlTtWLFCkU4qVA0HBgyZIj69ttv1dChQ3MmuO66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;" value="" vertex="1">
+          <mxGeometry height="80" width="154.96" x="10" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-32" parent="fUe3NVcBme_qR7799I4q-1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAKIAAABuCAYAAACk2MjUAAAQRUlEQVR4Xu2dCdRVYxfHdyIkwiqlyIokU8aUDCk0pxIlqSirlbESQkIzMrRoUCkqQ1GGFSJDSUIkc8MyJEOUWWTs+77f863zrtN9z73nnnvOeXvuOXuv9S7Dvffc/ez9v8+zp2fvcv/5H4mSSmAbS6CcAnEba0C/3khAgahAsEICCkQr1KBMKBAVA1ZIQIFohRqUCQWiYsAKCSgQrVBDaSb++usvuf3222XAgAGy0047WcpldGwpEKOTZaRP6t+/v9x1113yySefSO3atSN9to0PUyBaqJVnn31W2rZtK+QaPv74YwWihTpKPEsbN26Uli1bSs2aNeXpp59WICZe45Yu8IwzzhCO5QceeEDuv/9+PZpz6YkjI0yKuly5csKf0tYSGDdunHz55Zdy8803S69evXyB+PLLL8vdd98te+21lwwbNkyqVKkiv/32m9xwww3G0SkmCmwjXn755TJhwgTZsmVLwessX768TJo0yQhb6f8S+PDDD+Wiiy6Sl156SbbffntfID7yyCNy7rnnmg2Bv7333luuueYamTt3rpx55pmCnoqJAgFx8+bNUq1aNfnjjz+kXbt20qlTJyOAqlWrSsWKFeXNN9+Url27mvW3bt1ahg4dKrvttpv8/fffsmnTJiPsMWPGyOrVq2XWrFly9tlnF5OsYuP1zz//lGbNmsn06dOlTp065nv8dsSOHTtK3759zee+++47WbNmjQFymzZtjIyLjQIBcc6cOXLeeefJ888/LyeddFKptU6cOFEuvfRS8/+ffPJJ4/ll0muvvSYnnniivPPOO3L44YcXm7xi4bdfv35y1FFHyfnnn1/yfD8guhkh5ti7d2/Zb7/9ZMSIEbHwGPdDAwGxc+fOxpu78847Pfnq0qWLANbtttvO/EorV65c6n0//PCD2VXZIXfccce412f98+fPny8zZsyQhx9+eCte8wXit99+a04h3s8mUayUNxAxgvfZZx9ZtWqVAZIXVa9eXQg/8Ot+6623PN+zdu1aOe2000xYQknk1FNPNadDhQoVthLHL7/8IphCOCDY1HfccUeJ2eO8cfny5XLxxRcLTk6DBg2KWpx5AxGbDkP40Ucf9VzwRx99VHLUEn7I5rUtXLjQvPbUU08VteDiZh7T59VXX80a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;" value="" vertex="1">
+          <mxGeometry height="69" width="101.62" x="180" y="156.5" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-33" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;fontStyle=5" value="Equation {2}:" vertex="1">
+          <mxGeometry height="30" width="100" y="121" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-34" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=13;" value="The auxiliary variable z is used for calculation of T and R, the reflection and transmission coefficients. Note that here Delta U is not a random sample drawn from a uniform distribution, but rather the inner potential of the material. When sampling, one can simply draw from a uniform distribution and if it is smaller than for example the transmission coefficient, then transmission occurs. T and R are related simply via subtraction from 1." vertex="1">
+          <mxGeometry height="83.5" width="570" x="290" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-59" parent="fUe3NVcBme_qR7799I4q-1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAYcAAAA+CAYAAADArNd3AAAbQ0lEQVR4Xu3dB7AsRdUH8CYjUVAQyUhSkCw5IyA5iaCSc1CCBMlIRjKSc05iAESikoOAkqOSUUEFJCg5fJ+/qWpq3rzZnd27M+/efbdPFfX07mxP97+7T/if071j/N//JCRJCCQEEgIJgYRADoExknFI6yEhkBBICCQEiggk45DWREIgIZAQSAiMhEAyDmlRJAQSAgmBhEAyDmkNJAQSAgmBhEA1AilyqMYoPZEQSAgkBIYdAsk4DLspTwNOCCQEEgLVCCTjUI1ReiIhkBBICAw7BJJxGHZTngacEEgIJASqEUjGoRqj9ERCICGQEBh2CCTjMOymPA04IZAQSAhUI5CMQzVG6YmEQEIgITDsEEjGYdhNeRpwQiAhkBCoRiAZh2qM0hMJgYRAQmDYIZCMw7Cb8jTgJhH473//Gy6//PKw+eab9/yaP/zhD2GsscYKCy20UM9tpQYGD4HLLrssLLfccmHKKafsuRMnnnhi2GGHHXpup5MGknHoBKX0TEKgAwTefffdsOaaa4add945rLrqqh18I4QHHnggvPTSS2G++eYLM8wwwwjf+cc//hHWXnvtcMopp2SfJ+k/BC666KLwq1/9KnMYxhlnnMoB/Otf/wr33XdfmGyyycLCCy8cxh577BG+c9BBB4VXX301MBJNS+3G4Y9//GPYbbfdwlVXXRU+//nPN93/Yd3+X/7yl7DpppuGX/7yl2Hqqace1lgM9uA/+OCDsPrqq4ftttsuU+hV8vjjj4etttoqiDTmn3/+TIEceeSR2ffz8sorr2SG5sILLwxzzjlnVbN98/nPfvaz8NRTT4VTTz21b/rcbUfty7POOitcffXVlYbhk08+CT/5yU/Caaedlq2je++9N9Of11577Uh6dI899gh+hsd6aVJqNQ6PPvpoWHbZZcO///3vsMgii4Tf/e53YcIJJ2yy/8O27RdffDEstdRS4a9//Wv42te+Fm677bbwxS9+cdjiMdgD33vvvcPLL78czjvvvMqucKBWWmmlsOSSS4Zf/OIXmeLYaaedwhlnnBH+/Oc/h+mnn36ENiiXPffcMzzyyCMZzdTvQmFus8022TB22WWXcNRRRzU+JMZ46623zvbI+eef37jjal9+4xvfCOa6OJ/FwX788cfhe9/7XqYvr7/++kx3Pv/882G22WYLP/rRj0YyAh999FHmUBx22GGZIWlKajMOTz/9dKasvvzlL2fez1577RXmmWeecM0114Txxx+/qf4Py3Z5k7AeY4wxMqWx//77Z3zmLbfcEiaddNJhiclgDvqFF17IKIAnnngifOELX2jblddffz2LAMYbb7xAYU000UTZ87/97W/DGmusEQ499NBs7xQFXbXCCiuEH/7wh4M51J7fjX/faKONwve///1MaR5++OFhv/32y7zmJkUOKBpuNN22227b5Ouy8c0999zZ/qyS3XffPRxzzDFZlJHPVc0+++zhjTfeCKimonAGGbvHHnusMiqpen+rz2sxDjhTXhBv6IQTTsgWPs92vfXWC1NMMUW48sorR+LOBtrh4f49ymXppZfOooWzzz47TDLJJBkHucEGG2QURYrWRv0K+c53vhO+9KUvhZNOOqny5ebp0ksvDb/+9a/DWmut9dnzeGYe44orrph5j0W59dZbw7rrrhs4YfjouuXZZ5/NjNIll1zS2F79zW9+EzbeeONMEW6xxRbZEG688cbMWKBKRBFNyemnnx623377MOaYY4Z77rknLLDAAk29Ktx9993hW9/6VhbVV1Hr5n3xxRcPiy66aLj99ttH6BOdetdddwWMTBmlaAzWU1O49WwcPvzww2xR6+CGG244wuCEP/IP77//fjA5SXpHgGH49re/HXbccccRGsNBSlY99NBD4Yorruj9RamFjhDADS+22GKZB8dgtxPKUT5i1llnzfj2vFAoSyyxRJhpppkCRV0mX//618PKK6/cCA3DgVtnnXUyamyqqabqaOzdPGRdbrLJJlnuhEedl7///e8ZrSKRrw9NCYqHszrjjDM29YqsXfNoLZx55plt30N3oodEnHK0RYqIwbC+5KPK8ljnnHNOpl854hNPPHHtY+rZOOjRm2++2dZCVn1e+6hG4warsKz6fDSGZlCGhkK94447MuPQTiSsZ5555kz5iq6L9JBIQmRgk7/11lulTaFe5CUoUx5wndK0cZBwfe+99z6j0Yp99zknst9zlCK7r371qxmdjklpJyhElJp1obgETZwXjgLFb8633HLLkZpCOaGTMQgisrqlFuNQd6dSewmBfkBAIlGV2He/+91M4bcTief1118/o2z++c9/jkQNHXfccWHXXXcNX/nKV8IzzzxT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;" value="" vertex="1">
+          <mxGeometry height="40" width="252.26" x="10" y="261" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-60" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;fontStyle=5" value="Equation {3}:" vertex="1">
+          <mxGeometry height="30" width="100" y="231" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-61" parent="fUe3NVcBme_qR7799I4q-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="Here v_new is the particle&#39;s new direction, v_prev is the direction it was previously travelling in, theta is the polar angle with respect to the previous travelling direction (It is sampled directly as cos(theta)), and n is the uniformly sampled normal direction to the particle&#39;s previous direction." vertex="1">
+          <mxGeometry height="74" width="590" x="270" y="244" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-75" connectable="0" parent="1" style="group;fontSize=16;" value="" vertex="1">
           <mxGeometry height="470" width="870" x="20" y="1760" as="geometry" />
@@ -119,6 +140,9 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-156" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_mt" vertex="1">
           <mxGeometry height="30" width="140" x="1558" y="1220" as="geometry" />
         </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-20" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="YydNLhTS0zoFXrXitx1l-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-160" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU Edep Version" vertex="1">
           <mxGeometry height="250" width="230" x="1760" y="1430" as="geometry" />
         </mxCell>
@@ -146,6 +170,9 @@
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-167" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_edep" vertex="1">
           <mxGeometry height="30" width="140" x="1558" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-24" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-168" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="YydNLhTS0zoFXrXitx1l-23" value="">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-168" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU Trajectories Version" vertex="1">
           <mxGeometry height="440" width="230" x="1040" y="1230" as="geometry" />
@@ -191,13 +218,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-182" connectable="0" parent="1" style="group;fontSize=13;" value="" vertex="1">
-          <mxGeometry height="150" width="500" x="1198" y="1800" as="geometry" />
+          <mxGeometry height="170" width="500" x="1198" y="1800" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-180" parent="fUe3NVcBme_qR7799I4q-182" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;fontSize=13;" value="" vertex="1">
-          <mxGeometry height="140" width="500" y="5" as="geometry" />
+          <mxGeometry height="158.66666666666666" width="500" y="5.666666666666666" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-181" parent="fUe3NVcBme_qR7799I4q-182" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;br&gt;&lt;div&gt;Special events are identified by custom child edge IDs.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Termination events have no child edges and so have both values equal to -999.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Boundary crossing events are similar to elastic scattering events and so are &lt;br&gt;distinguished by having child edge 2 ID equal to -1 * child edge 1 ID.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Detection events have both child edge IDs as -998.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="150" width="450" x="30" as="geometry" />
+          <mxGeometry height="170" width="450" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-22" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="YydNLhTS0zoFXrXitx1l-21" value="">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fUe3NVcBme_qR7799I4q-183" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;" value="CPU SE Version" vertex="1">
           <mxGeometry height="310" width="230" x="1760" y="1690" as="geometry" />
@@ -246,17 +276,6 @@
         <mxCell id="fUe3NVcBme_qR7799I4q-201" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="nebula_cpu_SE_mode" vertex="1">
           <mxGeometry height="30" width="140" x="1558" y="1710" as="geometry" />
         </mxCell>
-        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-1" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-168" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0;exitY=0.045;exitDx=0;exitDy=0;exitPerimeter=0;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="960" y="1250" />
-              <mxPoint x="960" y="2094" />
-              <mxPoint x="1714" y="2094" />
-            </Array>
-            <mxPoint x="1450" y="2000" as="sourcePoint" />
-            <mxPoint x="1714" y="2519" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-2" edge="1" parent="1" source="fUe3NVcBme_qR7799I4q-151" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=0.991;exitY=0.068;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.012;entryY=0.13;entryDx=0;entryDy=0;entryPerimeter=0;" target="SQ9sBJwUYBfkxu-uvdz8-13">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
@@ -265,10 +284,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-13" parent="1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=13;" value="&lt;b&gt;Initialization&lt;/b&gt;" vertex="1">
-          <mxGeometry height="150" width="190" x="2110" y="1220" as="geometry" />
+          <mxGeometry height="180" width="190" x="2110" y="1220" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-14" parent="SQ9sBJwUYBfkxu-uvdz8-13" style="text;html=1;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;" value="Electrons specified in the .pri file are loaded into available CPU cores. They each contain particle information (Kinetic energy, direction, and current position) as well as a tag which identifies them as the nth primary electron." vertex="1">
-          <mxGeometry height="120" width="190" y="30" as="geometry" />
+          <mxGeometry height="150" width="190" y="30" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-17" parent="1" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#e0e0e0;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;align=center;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=13;" value="&lt;b&gt;simulate_to_end (simple_cpu_driver.h)&lt;/b&gt;" vertex="1">
           <mxGeometry height="190" width="320" x="2340" y="1220" as="geometry" />
@@ -307,7 +326,7 @@
             <Array as="points">
               <mxPoint x="2780" y="1325" />
               <mxPoint x="2780" y="920" />
-              <mxPoint x="3235" y="920" />
+              <mxPoint x="3291" y="920" />
             </Array>
             <mxPoint x="2880" y="1330" as="sourcePoint" />
             <mxPoint x="2760" y="982" as="targetPoint" />
@@ -406,7 +425,7 @@
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-92" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-45" source="SQ9sBJwUYBfkxu-uvdz8-65" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-94" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="536.4712499999996" y="425" />
+              <mxPoint x="690" y="440" />
             </Array>
             <mxPoint x="74.47124999999949" y="425" as="sourcePoint" />
             <mxPoint x="-19.528750000000514" y="475" as="targetPoint" />
@@ -441,45 +460,406 @@
           <mxGeometry height="50" width="358.11" x="25.944999999999993" y="400" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-104" parent="1" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="intersect (cpu_driver.inl)" vertex="1">
-          <mxGeometry height="600" width="620" x="3120" y="2080" as="geometry" />
+          <mxGeometry height="1510" width="1510" x="2536" y="2080" as="geometry" />
         </mxCell>
-        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-105" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle&#39;s next event is retrieved" vertex="1">
-          <mxGeometry height="60" width="170" x="180" y="40" as="geometry" />
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-105" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="Particle&#39;s next event is retrieved from memory" vertex="1">
+          <mxGeometry height="60" width="170" x="402.5" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-106" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the next event is scatter, this function does nothing and just&amp;nbsp;&lt;b&gt;EXITs&lt;/b&gt;" vertex="1">
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-106" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the next event is not intersect, this function does nothing and just&amp;nbsp;&lt;b&gt;EXITs&lt;/b&gt;" vertex="1">
           <mxGeometry height="100" width="200" x="20" y="150" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-107" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-105" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-106" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-108" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the next event is intersect, perform an intersection event" vertex="1">
-          <mxGeometry height="90" width="160" x="350" y="150" as="geometry" />
+          <mxGeometry height="90" width="160" x="795" y="150" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-109" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-105" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;" target="SQ9sBJwUYBfkxu-uvdz8-108" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-118" parent="SQ9sBJwUYBfkxu-uvdz8-104" style="swimlane;startSize=40;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=13;" value="boundary_intersect.execute (boundary_intersect.h)" vertex="1">
-          <mxGeometry height="290" width="340" x="260" y="290" as="geometry" />
+          <mxGeometry height="1200" width="1230" x="260" y="290" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-119" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Retrieves particle direction and the normal of the interface &quot;triangle&quot; that it has just intersected. Calculate the angle of direction of motion between the particle and the triangle&#39;s normal." vertex="1">
-          <mxGeometry height="90" width="300" x="20" y="60" as="geometry" />
+          <mxGeometry height="90" width="300" x="295.41999999999996" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-120" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Determine which material the particle is about to leave and which material the particle is about to enter." vertex="1">
-          <mxGeometry height="70" width="290" x="25" y="200" as="geometry" />
+        <mxCell id="SQ9sBJwUYBfkxu-uvdz8-120" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Determine which material the particle is about to leave (material A) and which material the particle is about to enter (material B)." vertex="1">
+          <mxGeometry height="70" width="290" x="300.41999999999996" y="200" as="geometry" />
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-121" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-119" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="SQ9sBJwUYBfkxu-uvdz8-120" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-1" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-120" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2039.62" y="2520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-2" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="If material B is a detector (Plain, SE or BSE specific), set the particle status to DETECTED and remove it from the active list of particles. For the SE detector only do this if the particle energy is below 50 eV, and for the BSE detector only if the energy is equal to or above 50 eV" vertex="1">
+          <mxGeometry height="130" width="270" x="20" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-7" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-120" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2524.62" y="2520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-8" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="If material B is a terminator, set the next particle event to TERMINATED and remove it from the active list of particles." vertex="1">
+          <mxGeometry height="130" width="160" x="330" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-9" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-120" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2654.62" y="2520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-10" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="If material B is a mirror, reflect the particle by changing its direction in the normal direction of the mirror by -2 * cos(theta)&amp;nbsp;" vertex="1">
+          <mxGeometry height="130" width="150" x="530" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-11" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="SQ9sBJwUYBfkxu-uvdz8-120" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2904.62" y="2520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-12" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;direction=west;" value="If else, continue along the code" vertex="1">
+          <mxGeometry height="130" width="70" x="800.84" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-15" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-12" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-16" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3249.62" y="2640" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-16" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Calculate the change in inner potential between the materials. We subtract the inner potential of material A and add that of material B. For an electron moving from sample to vacuum for example, this would mean the electron loses the inner potential from its kinetic energy." vertex="1">
+          <mxGeometry height="130" width="272.1" x="699.79" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-26" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-16" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-27" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3751" y="2820" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-27" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;fillColor=#f8cecc;strokeColor=#b85450;" value="The boundary transition event counts as a scattering event for the trajectories function, so we increment the edge ID counter so that the edge leading away from this node is a different value from the one leading to it." vertex="1">
+          <mxGeometry height="130" width="210.21" x="576.952" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-28" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-16" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-29" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3751" y="2820" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-29" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="Calculate the transmission probability and sample whether or not the particle has made it through. The transmission and reflection expressions are calculated using equation {2}." vertex="1">
+          <mxGeometry height="130" width="175.11" x="919.6179999999999" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-35" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-29" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-36" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3751" y="3000" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-36" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the electron is transmitted, refraction occurs and the direction of the electron is updated according to Snell&#39;s law (equation 2.17 in Luc&#39;s thesis). The kinetic energy of the electron is updated, the current material it is in is updated, and the function &lt;b&gt;EXITS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="160" width="191.14" x="804.048" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-37" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-29" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-38" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3751" y="3000" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-38" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;" value="If the electron is not transmitted, It is reflected in the same way as the mirror calculation is handled earlier. The function then &lt;b&gt;EXITS.&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="175.11" x="1035.188" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-39" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-118" source="YydNLhTS0zoFXrXitx1l-38" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;dashed=1;" target="YydNLhTS0zoFXrXitx1l-40" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3922" y="3180" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-40" parent="SQ9sBJwUYBfkxu-uvdz8-118" style="whiteSpace=wrap;html=1;fontSize=13;dashed=1;" value="There is an optional bit of code that handles absorption at interfaces, but this is used in the alternate Kieft model and is thus switched off by default." vertex="1">
+          <mxGeometry height="140" width="154.81" x="1045.3380000000002" y="1040" as="geometry" />
+        </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-125" edge="1" parent="SQ9sBJwUYBfkxu-uvdz8-104" source="SQ9sBJwUYBfkxu-uvdz8-108" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-118" value="">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="345.2499999999999" y="190" as="sourcePoint" />
-            <mxPoint x="465.2499999999999" y="240" as="targetPoint" />
+            <mxPoint x="-1886.75" y="190" as="sourcePoint" />
+            <mxPoint x="-1766.75" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SQ9sBJwUYBfkxu-uvdz8-110" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-45" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-104" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="3300" y="2060" as="sourcePoint" />
             <mxPoint x="3414" y="2190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-19" parent="1" style="whiteSpace=wrap;html=1;fontSize=13;fontStyle=0;startSize=30;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Relevant code chunks for the edep version will be shown in blue" vertex="1">
+          <mxGeometry height="95" width="155" x="2065" y="1507.5" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-21" parent="1" style="whiteSpace=wrap;html=1;fontSize=13;fontStyle=0;startSize=30;horizontal=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Relevant code chunks for the SE version will be shown in green" vertex="1">
+          <mxGeometry height="92.5" width="145" x="2070" y="1798.75" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-23" parent="1" style="whiteSpace=wrap;html=1;fontSize=13;fontStyle=0;startSize=30;horizontal=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Relevant code chunks for the trajectories version will be shown in red" vertex="1">
+          <mxGeometry height="90" width="140" x="970" y="1790" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-25" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-21" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SQ9sBJwUYBfkxu-uvdz8-104">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2720" y="1355" />
+              <mxPoint x="2720" y="2040" />
+              <mxPoint x="3291" y="2040" />
+            </Array>
+            <mxPoint x="2520" y="1460" as="sourcePoint" />
+            <mxPoint x="3231" y="1665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-41" parent="1" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=12;" value="scatter (cpu_driver.inl)" vertex="1">
+          <mxGeometry height="1560" width="2008" x="2704.5" y="3685" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-42" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="Particle&#39;s next event is retrieved from memory" vertex="1">
+          <mxGeometry height="50" width="140" x="776.4875000000001" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-43" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the next event is not scatter, this function does nothing and just&amp;nbsp;&lt;b&gt;EXITs&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="150" x="654.4875000000001" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-44" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-42" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-43" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-45" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="Forget the last interface triangle that the particle just came from. This is important in the case of large polar angle changes when the particle scatters back the way it came." vertex="1">
+          <mxGeometry height="120" width="170" x="868.4875000000001" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-46" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-42" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-51" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-45" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-52" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1364.8217500000003" y="3775" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-52" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="The init function previously sampled the next type of scattering event as well as the distance to it. Based on this, the code executes the specified scatter event." vertex="1">
+          <mxGeometry height="70" width="410" x="748.4875000000001" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-53" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-52" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-54" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1122.2717500000006" y="3945" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-54" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;If the particle scatters elastically:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;We retrieve the particle from memory and directly sample a cos(theta) value using the icdf table from the .mat file. The accompanying sin(theta) is also calculated.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="410" x="255.05000000000007" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-55" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-52" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-56" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1122.2717500000006" y="3945" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-56" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;If the particle scatters inelastically:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;We retrieve the particle from memory and sample the energy lost by the primary during the collision (denoted by omega)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="410" x="1241.9250000000002" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-57" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-54" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-58" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-869.2717500000002" y="4065" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-58" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="An azimuthal angle phi is chosen randomly using a uniform distribution. The particle&#39;s new direction is calculated according to equation {3}." vertex="1">
+          <mxGeometry height="70" width="410" x="255.05000000000007" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-62" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-58" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-63" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1094.2717500000006" y="4205" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-63" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the particle&#39;s energy is below 200 eV, and if phonon scattering is enabled, a small amount of energy is subtracted from the particle&#39;s kinetic energy (around a couple of tens of meV)" vertex="1">
+          <mxGeometry height="70" width="410" x="20" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-66" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-58" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-67" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1094.2717500000006" y="4205" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-67" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the particle&#39;s energy is above 200 eV, it scattered elastically and so does not lose any energy." vertex="1">
+          <mxGeometry height="70" width="410" x="490.1" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-68" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-67" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;dashed=1;" target="YydNLhTS0zoFXrXitx1l-69" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-616.2717500000002" y="4325" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-69" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;dashed=1;" value="Atomic recoil loss is also possible via the Kieft and Bosch method, but is switched off by default." vertex="1">
+          <mxGeometry height="70" width="280" x="370" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-70" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-67" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-71" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-616.2717500000002" y="4325" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-71" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="A scatter event is a node, so the edge tag should be updated." vertex="1">
+          <mxGeometry height="70" width="142" x="690" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-72" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-67" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-73" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-74.67175000000088" y="4325" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-73" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="A scatter event has occurred, so the scattering counter should be updated." vertex="1">
+          <mxGeometry height="70" width="148.2" x="872" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-74" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-56" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-75" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="342.5882499999992" y="4065" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-75" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="The edep function logs energy changing scattering events, and the energy that is lost by the primary is omega, so the &quot;energy deposition&quot; that is logged, is exactly this omega." vertex="1">
+          <mxGeometry height="100" width="167.74" x="1126.9750000000001" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-76" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-63" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-77" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1224.2762499999988" y="4325" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-77" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="The energy of the electron is changed by this event, so the edep function will log this event." vertex="1">
+          <mxGeometry height="70" width="210" x="120" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-78" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-56" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-79" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1525.2612499999993" y="4065" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-79" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;The binding energy of the secondary electron in the collision is sampled. This choose whether we perform a valence excitation or an inner shell excitation.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Implementation detail: Intuitively we would expect to sample a binding energy (i.e. choose a shell that the secondary electron comes from), and then reject if that binding energy is larger than the energy loss omega. The assumption is made, however, that we instead first sample an energy loss omega, and that the shell with the highest binding energy below the sampled omega value dominates the result. This is then how we choose the shell from which the electron comes from, and it comes with a significant speed advantage.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="432.16" x="1334.7150000000001" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-80" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-79" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-81" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2586.4212499999994" y="4185" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-81" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If valence excitation, we check omega next.&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="40" width="152.16" x="1233.3300000000002" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-82" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-79" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-83" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2582.73125" y="4185" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-83" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If inner shell excitation, the method of Ivanchenko / Kieft &amp;amp; Bosch is followed to choose the inelastic scattering angle." vertex="1">
+          <mxGeometry height="70" width="177.64" x="1690.6200000000003" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-84" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-83" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-85" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2686.73125" y="4385" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-85" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="The secondary electron&#39;s direction is also updated based on momentum conservation" vertex="1">
+          <mxGeometry height="70" width="177.64" x="1690.6200000000003" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-88" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-85" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-89" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2782.73125" y="4505" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-89" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="The inner shell excitation event is a node, so the edge tag should be updated." vertex="1">
+          <mxGeometry height="70" width="177.64" x="1570.6200000000003" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-90" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-85" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-91" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2782.73125" y="4505" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-91" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If tracking secondary electrons is enabled, the kinetic energy of this new secondary is given as the Fermi level + omega - binding energy.&amp;nbsp;" vertex="1">
+          <mxGeometry height="80" width="200" x="1788.2600000000002" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-92" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-81" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-93" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2686.73125" y="4385" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-93" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the energy loss exceeds the band gap (in the case of insulators and semiconductors), then an atomic electron (secondary electron) can be excited.&amp;nbsp;" vertex="1">
+          <mxGeometry height="89" width="209.8" x="1060.2000000000003" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-94" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-81" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-95" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2686.73125" y="4385" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-95" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the energy loss doesn&#39;t exceed the band gap, we assume loss due to longitudinal optical phonons. Omega is subtracted from the primary energy but no secondary is generated, and the primary is also not deflected." vertex="1">
+          <mxGeometry height="110" width="248.62" x="1310.0000000000002" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-96" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-95" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-97" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4015.3637499999995" y="4475" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-97" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Excitation by LO phonon is a node, and so the edge tag is updated." vertex="1">
+          <mxGeometry height="70" width="178.62" x="1345.0000000000002" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-98" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-93" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-99" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4016.3375000000005" y="4475" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-99" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="A momentum transfer q is sampled from the icdf table using E and omega." vertex="1">
+          <mxGeometry height="70" width="169.8" x="1080.2000000000003" y="979" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-100" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-99" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-101" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4614" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-101" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="The primary electron&#39;s direction is updated by uniformly drawing a random azimuthal angle, finding the normal vector to the current travelling direction, calculating cos(theta) and sin(theta) from the sampled momentum change and then updating the direction of the primary again with equation {3}" vertex="1">
+          <mxGeometry height="141" width="210" x="1060.1000000000004" y="1099" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-102" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-101" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-103" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4734" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-103" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Such a scattering event is a node, so the edge tags should be updated." vertex="1">
+          <mxGeometry height="80" width="159.9" x="798.2020000000003" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-104" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-101" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-105" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4734" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-105" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="A scattering event has occurred, so the scatter counter should be updated." vertex="1">
+          <mxGeometry height="100" width="119.95" x="998.1020000000003" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-106" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-101" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-107" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4734" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-107" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If tracking secondary electrons is enabled, the energy of the new secondary depends on the exact type of excitation event, which will be decided by the value of q." vertex="1">
+          <mxGeometry height="100" width="189.97" x="1342.0280000000002" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-108" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-107" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-109" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4925" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-109" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the q value is smaller than the difference between the square root of E and the square root of E+omega, it is a plasmon decay event.&amp;nbsp;" vertex="1">
+          <mxGeometry height="100" width="189.97" x="1112.0580000000002" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-110" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-107" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-111" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4925" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-111" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If the q value is smaller than the sum of the square root of E and the square root of E+omega, it is a single excitation event." vertex="1">
+          <mxGeometry height="100" width="189.97" x="1342.0280000000002" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-112" edge="1" parent="YydNLhTS0zoFXrXitx1l-41" source="YydNLhTS0zoFXrXitx1l-107" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" target="YydNLhTS0zoFXrXitx1l-113" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3869.5" y="4925" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-113" parent="YydNLhTS0zoFXrXitx1l-41" style="whiteSpace=wrap;html=1;" value="If it is neither, q is too large for either event. No secondary electron is created, and the electron energy is not updated." vertex="1">
+          <mxGeometry height="100" width="189.97" x="1571.9980000000003" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-49" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-104" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YydNLhTS0zoFXrXitx1l-41" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3310" y="3600" as="sourcePoint" />
+            <mxPoint x="2980" y="3650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YydNLhTS0zoFXrXitx1l-50" edge="1" parent="1" source="SQ9sBJwUYBfkxu-uvdz8-22" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endFill=1;endSize=8;fontFamily=Verdana;fontSize=13;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YydNLhTS0zoFXrXitx1l-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2690" y="1390" />
+              <mxPoint x="2690" y="1810" />
+              <mxPoint x="2440" y="1810" />
+              <mxPoint x="2440" y="3640" />
+              <mxPoint x="3291" y="3640" />
+            </Array>
+            <mxPoint x="2560" y="1810" as="sourcePoint" />
+            <mxPoint x="3191" y="2535" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
