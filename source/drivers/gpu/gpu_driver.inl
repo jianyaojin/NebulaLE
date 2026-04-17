@@ -22,7 +22,7 @@ namespace kernels
 		material_manager_t materials,
 		geometry_manager_t geometry,
 		util::random_generator<true>* curand_states,
-		real min_energy, real max_energy);
+		real min_energy, real max_energy, real z_limit);
 
 	template<typename particle_manager_t, typename material_manager_t, typename geometry_manager_t, typename intersect_t>
 	__global__ void intersect(particle_manager_t particles,
@@ -53,10 +53,10 @@ CPU gpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::gpu_driver(
 	intersect_t intersect,
 	material_manager_t const & materials,
 	geometry_manager_t const & geometry,
-	real min_energy, real max_energy,
+	real min_energy, real max_energy, real z_limit,
 	seed_t seed
 ) :
-	_min_energy(min_energy), _max_energy(max_energy),
+	_min_energy(min_energy), _max_energy(max_energy), _z_limit(z_limit),
 	_particles(particle_manager_t::create(particle_capacity)),
 	_materials(materials),
 	_geometry(geometry),
@@ -324,7 +324,7 @@ CPU void gpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::init()
 {
 	kernels::init<<<_num_blocks, _threads_per_block>>>(
 		_particles, _materials, _geometry, curand_states,
-		_min_energy, _max_energy
+		_min_energy, _max_energy, _z_limit
 	);
 }
 
@@ -406,7 +406,7 @@ __global__ void kernels::init(
 	material_manager_t materials,
 	geometry_manager_t geometry,
 	util::random_generator<true>* curand_states,
-	real min_energy, real max_energy)
+	real min_energy, real max_energy, real z_limit)
 {
 	const auto particle_idx = threadIdx.x + blockIdx.x*blockDim.x;
 	if(!particles.exists(particle_idx))
@@ -421,6 +421,20 @@ __global__ void kernels::init(
 
 	// If not in domain, terminate
 	if (!geometry.in_domain(this_particle.pos))
+	{
+		particles.terminate(particle_idx);
+		return;
+	}
+
+	// If lower than user specified z value, and is a secondary (below 50 eV + The inner potential,
+	// since the definition of secondaries is 50 eV with respect to vacuum energy), do not track.
+	const auto mat_idx = particles.get_material_index(particle_idx);    // Retrieve material info
+	real energy_cutoff = min_energy;  // Set energy cutoff to the min simulation energy as fallback
+	if (materials.is_physical(mat_idx))
+	{
+    	energy_cutoff = materials[mat_idx].barrier + 50.0;
+	}
+	if ((this_particle.pos.z < z_limit) && (this_particle.kin_energy < energy_cutoff))
 	{
 		particles.terminate(particle_idx);
 		return;

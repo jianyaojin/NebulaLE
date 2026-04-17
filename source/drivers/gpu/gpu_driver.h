@@ -51,6 +51,8 @@ public:
 	 * \param geometry          Geometry manager, holding the simulation geometry.
 	 * \param min_energy        Energy threshold w.r.t. the vacuum level below
 	 *                          which particles must be terminated.
+	 * \param z_limit			The z value below which we choose to no longer track
+	 * 							electrons below a certian energy
 	 * \param max_energy        Energy threshold w.r.t. the vacuum level above
 	 *                          which particles must be terminated.
 	 * \param seed              Seed for the random number generator.
@@ -59,7 +61,7 @@ public:
 		intersect_t intersect,
 		material_manager_t const & materials,
 		geometry_manager_t const & geometry,
-		real min_energy, real max_energy,
+		real min_energy, real max_energy, real z_limit,
 		seed_t seed = util::random_generator<true>::default_seed);
 	CPU ~gpu_driver();
 
@@ -185,6 +187,10 @@ public:
 	// must be terminated.
 	real _min_energy;
 	real _max_energy;
+	
+	// z value threshold below which any low energy electrons are no longer
+	// tracked.
+	real _z_limit;
 
 private:
 	particle_manager_t _particles;
