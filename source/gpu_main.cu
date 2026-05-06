@@ -234,7 +234,11 @@ int main(int argc, char** argv)
 	// Settings
 	cli_params p("[options] <geometry.tri> <primaries.pri> [material0.mat] .. [materialN.mat]");
 	p.add_option("energy-threshold", "Lowest energy to simulate", 0);
-	p.add_option("z_cutoff", "Custom z coordinate limit under which electrons are no longer tracked", -std::numeric_limits<real>::infinity());
+	// There is a currently parser issue which means that if the default value is set as -std::numeric_limits<real>::infinity(), 
+	// that the actual value assigned to z_limit is 0 or some other garbage. We sidestep this issue for now
+	// by setting an unrealistically large negative number which we should never hit, but this needs to be fixed 
+	// sometime in the future. 
+	p.add_option("z_cutoff", "Custom z coordinate limit under which electrons are no longer tracked", -99999999.0);
 	p.add_option("SE_cutoff_zlim", "An electon that falls under the z_cutoff and below this energy is no longer tracked", 50.0);
 	p.add_option("capacity", "Electron capacity on the GPU", 1000000);
 	p.add_option("prescan-size", "Number of electrons to use for prescan", 1000);
