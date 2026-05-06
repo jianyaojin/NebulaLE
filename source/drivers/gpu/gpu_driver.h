@@ -53,6 +53,9 @@ public:
 	 *                          which particles must be terminated.
 	 * \param z_limit			The z value below which we choose to no longer track
 	 * 							electrons below a certian energy
+	 * \param SE_limit_zlim		The energy limit associated with the z_limit. If electrons
+	 * 							fall under the z limit AND have energy below this energy limit,
+	 * 							they will no longer be tracked.
 	 * \param max_energy        Energy threshold w.r.t. the vacuum level above
 	 *                          which particles must be terminated.
 	 * \param seed              Seed for the random number generator.
@@ -62,6 +65,7 @@ public:
 		material_manager_t const & materials,
 		geometry_manager_t const & geometry,
 		real min_energy, real max_energy, real z_limit,
+		real SE_limit_zlim,
 		seed_t seed = util::random_generator<true>::default_seed);
 	CPU ~gpu_driver();
 
@@ -189,8 +193,10 @@ public:
 	real _max_energy;
 	
 	// z value threshold below which any low energy electrons are no longer
-	// tracked.
+	// tracked, together with the SE energy threshold below which electrons are
+	// no longer tracked (See definition of the init() function)
 	real _z_limit;
+	real _SE_limit_zlim;
 
 private:
 	particle_manager_t _particles;

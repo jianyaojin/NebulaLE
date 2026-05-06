@@ -22,7 +22,7 @@ namespace kernels
 		material_manager_t materials,
 		geometry_manager_t geometry,
 		util::random_generator<true>* curand_states,
-		real min_energy, real max_energy, real z_limit);
+		real min_energy, real max_energy, real z_limit, real SE_limit_zlim);
 
 	template<typename particle_manager_t, typename material_manager_t, typename geometry_manager_t, typename intersect_t>
 	__global__ void intersect(particle_manager_t particles,
@@ -53,10 +53,10 @@ CPU gpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::gpu_driver(
 	intersect_t intersect,
 	material_manager_t const & materials,
 	geometry_manager_t const & geometry,
-	real min_energy, real max_energy, real z_limit,
+	real min_energy, real max_energy, real z_limit, real SE_limit_zlim,
 	seed_t seed
 ) :
-	_min_energy(min_energy), _max_energy(max_energy), _z_limit(z_limit),
+	_min_energy(min_energy), _max_energy(max_energy), _z_limit(z_limit), _SE_limit_zlim(SE_limit_zlim),
 	_particles(particle_manager_t::create(particle_capacity)),
 	_materials(materials),
 	_geometry(geometry),
@@ -324,7 +324,7 @@ CPU void gpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::init()
 {
 	kernels::init<<<_num_blocks, _threads_per_block>>>(
 		_particles, _materials, _geometry, curand_states,
-		_min_energy, _max_energy, _z_limit
+		_min_energy, _max_energy, _z_limit, _SE_limit_zlim
 	);
 }
 
@@ -406,7 +406,7 @@ __global__ void kernels::init(
 	material_manager_t materials,
 	geometry_manager_t geometry,
 	util::random_generator<true>* curand_states,
-	real min_energy, real max_energy, real z_limit)
+	real min_energy, real max_energy, real z_limit, real SE_limit_zlim)
 {
 	const auto particle_idx = threadIdx.x + blockIdx.x*blockDim.x;
 	if(!particles.exists(particle_idx))
@@ -432,7 +432,7 @@ __global__ void kernels::init(
 	real energy_cutoff = min_energy;  // Set energy cutoff to the min simulation energy as fallback
 	if (materials.is_physical(mat_idx))
 	{
-    	energy_cutoff = materials[mat_idx].barrier + 50.0;
+    	energy_cutoff = materials[mat_idx].barrier + SE_limit_zlim;
 	}
 	if ((this_particle.pos.z < z_limit) && (this_particle.kin_energy < energy_cutoff))
 	{

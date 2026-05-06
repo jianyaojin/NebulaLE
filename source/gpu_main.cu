@@ -59,6 +59,7 @@ struct worker_data
 	real min_energy;
 	real max_energy;
 	real z_limit;
+	real SE_limit_zlim;
 
 	std::vector<uint32_t> running_count;
 
@@ -103,7 +104,7 @@ void worker_thread(worker_data& data,
 	intersect_t inter;
 	driver d(data.capacity,
 		inter, materials, geometry,
-		data.min_energy, data.max_energy, data.z_limit, seed);
+		data.min_energy, data.max_energy, data.z_limit, data.SE_limit_zlim, seed);
 
 
 	// Do prescan, if desired
@@ -234,6 +235,7 @@ int main(int argc, char** argv)
 	cli_params p("[options] <geometry.tri> <primaries.pri> [material0.mat] .. [materialN.mat]");
 	p.add_option("energy-threshold", "Lowest energy to simulate", 0);
 	p.add_option("z_cutoff", "Custom z coordinate limit under which electrons are no longer tracked", -std::numeric_limits<real>::infinity());
+	p.add_option("SE_cutoff_zlim", "An electon that falls under the z_cutoff and below this energy is no longer tracked", 50.0);
 	p.add_option("capacity", "Electron capacity on the GPU", 1000000);
 	p.add_option("prescan-size", "Number of electrons to use for prescan", 1000);
 	p.add_option("batch-factor", "Multiplication factor for electron batch size", 0.9);
@@ -242,6 +244,7 @@ int main(int argc, char** argv)
 	p.parse(argc, argv);
 	const real energy_threshold = p.get_flag<real>("energy-threshold");
 	const real z_cutoff = p.get_flag<real>("z_cutoff");
+	const real SE_cutoff_zlim = p.get_flag<real>("SE_cutoff_zlim");
 	const uint32_t capacity = p.get_flag<uint32_t>("capacity");
 	const uint32_t prescan_size = p.get_flag<uint32_t>("prescan-size");
 	const real batch_factor = p.get_flag<real>("batch-factor");
@@ -268,6 +271,7 @@ int main(int argc, char** argv)
 	data.min_energy = energy_threshold;
 	data.max_energy = std::numeric_limits<real>::infinity();
 	data.z_limit = z_cutoff;
+	data.SE_limit_zlim = SE_cutoff_zlim;
 	data.prescan_size = prescan_size;
 	data.batch_factor = batch_factor;
 
