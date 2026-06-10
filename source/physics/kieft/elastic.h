@@ -4,21 +4,20 @@
 namespace nbl { namespace scatter {
 
 /**
- * \brief Elastic scattering, according to the Kieft & Bosch model.
+ * \brief Kieft and Bosch's elastic scattering model, but only the Mott scattering part.
+ * In the current implementation, phonon scattering has been separated into its own file,
+ * see quasi_elastic.h
  *
- * This is a combination of Mott scattering (for energy > 200 eV), acoustic
- * phonon scattering (< 100 eV) and interpolation in between. The cross sections
- * are combined by the cross section tool.
  *
- *   - See doi:10.1088/0022-3727/41/21/215310 (Kieft paper)
- *   - See doi:10.4233/uuid:f214f594-a21f-4318-9f29-9776d60ab06c (Verduin thesis)
+ *   - See doi:10.1088/0022-3727/41/21/215310 (Kieft paper, with the original hybrid combined model)
+ *   - See doi:10.4233/uuid:f214f594-a21f-4318-9f29-9776d60ab06c (Verduin thesis, follows Kieft and Bosch)
  *
  * \tparam gpu_flag             Is the code to be run on a GPU?
- * \tparam acoustic_phonon_loss Lose energy to acoustic phonons
+ * \tparam acoustic_phonon_loss Lose energy to acoustic phonons. In current version this will never happen since channels are separated. TODO: Completely remove phonon loss
  * \tparam atomic_recoil_loss   Lose energy to atomic recoil for Mott scattering.
  */
 template<bool gpu_flag,
-	bool acoustic_phonon_loss = true,
+	bool acoustic_phonon_loss = false,
 	bool atomic_recoil_loss = true>
 class kieft_elastic
 {
@@ -34,7 +33,7 @@ public:
 	static void print_info(std::ostream& stream)
 	{
 		stream << std::boolalpha <<
-			" * Kieft & Bosch elastic model\n"
+			" * Kieft & Bosch Mott Model\n"
 			"   Options:\n"
 			"     - Acoustic phonon loss: " << acoustic_phonon_loss << "\n"
 			"     - Atomic recoil loss: " << atomic_recoil_loss << "\n";
