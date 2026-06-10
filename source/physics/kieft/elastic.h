@@ -4,21 +4,19 @@
 namespace nbl { namespace scatter {
 
 /**
- * \brief Elastic scattering, according to the Kieft & Bosch model.
+ * \brief Kieft and Bosch's elastic scattering model, but only the Mott scattering part.
+ * 
+ * The phonon scattering model has been separated into its own scattering type, see quasi_elastic.h
  *
- * This is a combination of Mott scattering (for energy > 200 eV), acoustic
- * phonon scattering (< 100 eV) and interpolation in between. The cross sections
- * are combined by the cross section tool.
- *
- *   - See doi:10.1088/0022-3727/41/21/215310 (Kieft paper)
- *   - See doi:10.4233/uuid:f214f594-a21f-4318-9f29-9776d60ab06c (Verduin thesis)
+ *   - See doi:10.1088/0022-3727/41/21/215310 (Kieft paper, though they use the hybrid model which combines both)
+ *   - See doi:10.4233/uuid:f214f594-a21f-4318-9f29-9776d60ab06c (Verduin thesis, follows Kieft and Bosch.)
  *
  * \tparam gpu_flag             Is the code to be run on a GPU?
- * \tparam acoustic_phonon_loss Lose energy to acoustic phonons
+ * \tparam acoustic_phonon_loss Lose energy to acoustic phonons. Permanently turned off in this implementation, TODO: Remove completely.
  * \tparam atomic_recoil_loss   Lose energy to atomic recoil for Mott scattering.
  */
 template<bool gpu_flag,
-	bool acoustic_phonon_loss = true,
+	bool acoustic_phonon_loss = false,
 	bool atomic_recoil_loss = true>
 class kieft_elastic
 {
@@ -34,7 +32,7 @@ public:
 	static void print_info(std::ostream& stream)
 	{
 		stream << std::boolalpha <<
-			" * Kieft & Bosch elastic model\n"
+			" * Kieft & Bosch elastic model (Only Mott)\n"
 			"   Options:\n"
 			"     - Acoustic phonon loss: " << acoustic_phonon_loss << "\n"
 			"     - Atomic recoil loss: " << atomic_recoil_loss << "\n";
@@ -95,6 +93,7 @@ public:
 		//   original Kieft & Bosch code.
 		// the amount of energy loss for phonons can be found in the thesis of T.V. Eq. 3.116.
 		// TODO: set variable domain for phonon scattering
+		// TODO: Remove all traces of phonon scattering from the elastic.h file.
 		if (this_particle.kin_energy < 200)
 		{
 			if (acoustic_phonon_loss)

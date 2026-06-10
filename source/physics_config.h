@@ -10,6 +10,7 @@
 #include "core/material.h"
 #include "physics/kieft/inelastic.h"
 #include "physics/kieft/elastic.h"
+#include "physics/kieft/quasi_elastic.h"
 #include "physics/full_penn.h"
 #include "physics/boundary_intersect.h"
 
@@ -35,9 +36,13 @@ using inelastic_scatter = nbl::scatter::full_penn<gpu_flag,
 // Kieft & Bosch elastic model
 template<bool gpu_flag>
 using elastic_scatter = nbl::scatter::kieft_elastic<gpu_flag,
-	true, // Acoustic phonon loss
+	false, // Acoustic phonon loss. Since we have separated phonon scattering into its own channel this will simply be off.
 	true  // Atomic recoil loss
 >;
+
+// Phonon model of Schreiber (Kieft & Bosch implementation)
+template<bool gpu_flag>
+using quasi_elastic_scatter = nbl::scatter::schreiber_phonon<gpu_flag>;
 
 // Material boundary intersection
 using intersect_t = boundary_intersect<
@@ -51,7 +56,8 @@ using intersect_t = boundary_intersect<
 template<bool gpu_flag>
 using scatter_physics = scatter_list<
 	inelastic_scatter<gpu_flag>,
-	elastic_scatter<gpu_flag>
+	elastic_scatter<gpu_flag>,
+	quasi_elastic_scatter<gpu_flag>
 >;
 
 #endif
