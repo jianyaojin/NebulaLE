@@ -11,23 +11,34 @@ The focus of this version is to improve the physics models of the low energy ran
 
 Energy deposition function has dtype:
 
+`
 energy_dtype = np.dtype([
     ('x',  '=f'), ('y',  '=f'), ('z',  '=f'), # Position
     ('E',  '=f'), # Energy of electron before collision at position x, y, z (in eV)
     ('dE',  '=f'), # Energy loss (deV)
     ('px', '=i'), ('py', '=i')]) # tags of primary electron
-	
+`
+
 Trajectory function has dtype:
 
+`
 trajectory_dtype = np.dtype([
-    ('x',  '=f'), ('y',  '=f'), ('z',  '=f'), # Position
-    ('E',  '=f'), # Energy of electron before collision at position x, y, z (in eV)
-    ('dE',  '=f'), # Energy loss (deV)
-    ('px', '=i'), ('py', '=i'), # Pixel tag of primary
-    ('tag', '=i'), # Tag of primary
-    ('ns', '=i')]) # Consecutive scattering event number
+        ('x',  '=f'), ('y',  '=f'), ('z',  '=f'), # Position
+        ('E',  '=f'), # Energy of electron before collision at position x, y, z (in eV)
+        ('dE',  '=f'), # Energy loss (deV)
+        ('tag', '=i'), # Tag of primary
+        ('pe', '=i'),  # Parent edge id
+        ('ce1', '=i'), # Child edge one
+        ('ce2', '=i')])# Child edge two 
+`
 
 # Update Log:
+## Update 11-06-2026
+Added a quick feature where you can run the command:
+`nebula_cpu_traj <geometry.tri> <primaries.pri> <material.mat> >> output.det 2> SE_locations.txt`
+
+will create a text file with all inelastic events that occur. Also gives the location of the event if an SE is generated. 
+
 ### Update 14-05-2025
 Added Nebula trajectories function. This function views the electron scattering path as a tree, where each energy deposition event is a node and the path traversed by the electron between nodes are edges.
 

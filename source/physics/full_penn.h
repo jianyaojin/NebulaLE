@@ -1,7 +1,18 @@
 #ifndef __FULL_PENN_H_
 #define __FULL_PENN_H_
+#include <iostream>
+#include <mutex>
+#include <sstream>
+#include <string>
 
 namespace nbl { namespace scatter {
+
+inline void holegen_debug_print(std::string const& msg)
+{
+    static std::mutex m;
+    std::lock_guard<std::mutex> lock(m);
+    std::cerr << msg << '\n' << std::flush;
+}
 
 /**
  * \brief Inelastic scattering, according to the full Penn model.
@@ -197,6 +208,15 @@ public:
 
 						secondary_particle.kin_energy = x*omega + omega;
 						secondary_particle.dir = rng.uniform_vector();
+						
+						std::ostringstream oss;
+						oss << "Plasmon Decay SE,"
+							<< this_particle.pos.x << ","
+							<< this_particle.pos.y << ","
+							<< this_particle.pos.z;
+
+						holegen_debug_print(oss.str());
+
 					}
 					else if (q < k_fermi_omega + k_fermi)
 					{
@@ -225,14 +245,24 @@ public:
 
 						secondary_particle.kin_energy = magnitude_squared(ki) + omega;
 						secondary_particle.dir = ki + q*q_dir;
+						
+						std::ostringstream oss;
+						oss << "Single Excitation SE,"
+							<< this_particle.pos.x << ","
+							<< this_particle.pos.y << ","
+							<< this_particle.pos.z;
+
+						holegen_debug_print(oss.str());
+						
 					}
 					else
 					{
 						// q is too large for either plasmon decay or single
 						// excitation: do not create a secondary electron.
+						holegen_debug_print("Energy loss but no SE Generated");
 						return;
 					}
-
+					
 					particle_mgr.create_secondary(particle_idx, secondary_particle);
 				}
 				return;
@@ -245,6 +275,7 @@ public:
 				this_particle.kin_energy -= omega;
 				particle_mgr[particle_idx] = this_particle;
 				particle_mgr.update_edge_tag(particle_idx);
+				holegen_debug_print("Energy loss lower than bandgap");
 				return;
 			}
 		}
@@ -292,6 +323,15 @@ public:
 			secondary_particle.dir = secondary_dir;
 
 			particle_mgr.create_secondary(particle_idx, secondary_particle);
+			
+			std::ostringstream oss;
+			oss << "Inner Shell SE,"
+				<< this_particle.pos.x << ","
+				<< this_particle.pos.y << ","
+				<< this_particle.pos.z;
+
+			holegen_debug_print(oss.str());
+			
 		}
 	}
 
