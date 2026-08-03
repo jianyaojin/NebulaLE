@@ -1,0 +1,44 @@
+site_name: NebulaLE Documentation
+
+repo_url: https://github.com/USERNAME/REPOSITORY
+repo_name: jianyaojin/NebulaLE
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Release Notes:
+    - NebulaLE:
+        - v1.0.3 (Base): release-notes/nebulale/v1.0.3.md
+    - cstoolLE:
+        - v1.0.7 (Base): release-notes/cstoolle/v1.0.7.md
+  - Physics:
+      - Elastic scattering: theory/elastic.md
+      - Inelastic scattering: theory/inelastic.md
+
+
+
+# Update checklist:
+# 1) Changes made to files and committed
+# 2) Add short concise user-facing description of changes to changelog
+# 3) Explain changes in further detail in release notes. Here we should be able to trace each update from the first update to the most recent, and 
+# why each step was made.
+# 4) Update physics description and/or other relevant pages. Documentation should always contain the latest version.
