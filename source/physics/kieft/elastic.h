@@ -55,6 +55,12 @@ public:
 		// Get inverse mean free path for this kinetic energy
 		const real imfp = expr(_log_imfp_table.get(logr(this_particle.kin_energy)));
 
+		// Manually set the sampled path to infinity if below 100 eV. We only use Mott scattering above
+		// 100 eV.
+		if (this_particle.kin_energy < 100){
+			return std::numeric_limits<real>::infinity();
+		}
+
 		// Draw a distance
 		return rng.exponential(1 / imfp);
 	}
