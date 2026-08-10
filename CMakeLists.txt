@@ -30,6 +30,8 @@ else()
 	set(USE_CUDA OFF)
 endif()
 
+# Temporarily disable GPU features
+set(USE_CUDA OFF)
 
 # Find HDF5 library
 find_package(HDF5 1.8.13 REQUIRED C HL)
