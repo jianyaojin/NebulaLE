@@ -1,7 +1,18 @@
 #ifndef __FULL_PENN_H_
 #define __FULL_PENN_H_
+#include <iostream>
+#include <mutex>
+#include <sstream>
 
 namespace nbl { namespace scatter {
+
+inline void penn_debug_print(const std::string& message)
+{
+    static std::mutex output_mutex;
+    std::lock_guard<std::mutex> lock(output_mutex);
+
+    std::clog << message << '\n';
+}
 
 /**
  * \brief Inelastic scattering, according to the full Penn model.
@@ -65,6 +76,7 @@ public:
 		typename particle_manager::particle_index_t particle_idx,
 		util::random_generator<gpu_flag>& rng) const
 	{
+		std::mutex cerr_mutex;
 		// Retrieve current particle from global memory
 		auto this_particle = particle_mgr[particle_idx];
 
@@ -106,7 +118,7 @@ public:
 				real q;
 				{
 					const real x = logr(this_particle.kin_energy);
-					const real y = omega / this_particle.kin_energy;
+					const real y = omega / (this_particle.kin_energy - _min_exc);
 					const real z = rng.unit();
 					q = _q_icdf_table.get(x, y, z);
 				}
@@ -115,6 +127,14 @@ public:
 				vec3 q_dir, q_normal_dir;
 				{
 					const real costheta_prim_q = clampr((omega + q * q) / (2 * sqrtr(this_particle.kin_energy)*q), -1, 1);
+
+					// Debug section, disabled for the git push but can be reenabled to test q value validity
+					"""
+					std::ostringstream oss;
+					oss << (omega + q * q) / (2 * sqrtr(this_particle.kin_energy)*q) << " " << costheta_prim_q << " " << this_particle.kin_energy << " " << omega << " " << q;
+					penn_debug_print(oss.str());
+					"""
+
 					const real sintheta_prim_q = sqrtr(1 - costheta_prim_q * costheta_prim_q);
 
 					q_dir = normalised(this_particle.dir*costheta_prim_q + prim_normal_dir * sintheta_prim_q);
@@ -308,6 +328,7 @@ public:
 		full_penn inel;
 
 		inel._fermi = static_cast<real>(mat.get_property_quantity("fermi") / units::eV);
+		inel._min_exc = static_cast<real>(mat.get_property_quantity("min_excitation") / units::eV);
 		inel._band_gap = static_cast<real>(mat.get_property_quantity("band_gap", -1*units::eV) / units::eV);
 
 		{
