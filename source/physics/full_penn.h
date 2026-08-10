@@ -129,11 +129,11 @@ public:
 					const real costheta_prim_q = clampr((omega + q * q) / (2 * sqrtr(this_particle.kin_energy)*q), -1, 1);
 
 					// Debug section, disabled for the git push but can be reenabled to test q value validity
-					"""
-					std::ostringstream oss;
-					oss << (omega + q * q) / (2 * sqrtr(this_particle.kin_energy)*q) << " " << costheta_prim_q << " " << this_particle.kin_energy << " " << omega << " " << q;
-					penn_debug_print(oss.str());
-					"""
+					
+					//std::ostringstream oss;
+					//oss << (omega + q * q) / (2 * sqrtr(this_particle.kin_energy)*q) << " " << costheta_prim_q << " " << this_particle.kin_energy << " " << omega << " " << q;
+					//penn_debug_print(oss.str());
+					
 
 					const real sintheta_prim_q = sqrtr(1 - costheta_prim_q * costheta_prim_q);
 
@@ -444,6 +444,7 @@ public:
 
 		target._fermi = source._fermi;
 		target._band_gap = source._band_gap;
+		target._min_exc = source._min_exc;
 
 		target._log_imfp_table = util::table_1D<real, gpu_flag>::create(source._log_imfp_table);
 		target._log_omega_icdf_table = util::table_2D<real, gpu_flag>::create(source._log_omega_icdf_table);
@@ -514,6 +515,7 @@ private:
 
 	real _fermi;    ///< Fermi energy (eV)
 	real _band_gap; ///< Band gap (eV) (no band gap is denoted by -1)
+	real _min_exc;  ///< Minimum excitation (eV)
 
 	template<bool, bool>
 	friend class full_penn;
