@@ -1,5 +1,10 @@
 nebula changelog
 
+1.1.0 (2026-10-08)
+  - Separated phonon scattering and elastic scattering channels.
+    - Created an artificial transition between the two at 100 eV
+  - Fixed q values in full_penn not being read using the right scale.
+
 1.0.3 (WIP)
   - (No real code change) Drop support for C++11 and CUDA <9.2; add support for modern versions of CUDA.
 

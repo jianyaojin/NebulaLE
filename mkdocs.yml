@@ -25,16 +25,23 @@ theme:
 nav:
   - Home: index.md
   - Usage: usage.md
+  - Known Bugs: known_bugs.md
   - Release Notes:
     - NebulaLE:
         - v1.0.3 (Base): release-notes/nebulale/v1.0.3.md
+        - v1.1.0: release-notes/nebulale/v1.1.0.md
+
     - cstoolLE:
         - v1.0.7 (Base): release-notes/cstoolle/v1.0.7.md
-  - Physics:
-      - Elastic scattering: theory/elastic.md
-      - Inelastic scattering: theory/inelastic.md
+        - v1.1.0: release-notes/cstoolle/v1.1.0.md
 
-
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Update checklist:
 # 1) Changes made to files and committed
