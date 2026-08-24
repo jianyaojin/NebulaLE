@@ -187,11 +187,11 @@ int main(int argc, char** argv)
 				std::get<2>(work_data)); // number
 
 			// Simulate a little, output deposition data
-			d.simulate_to_end([&deposit_buff, &pixels](particle const & before, particle const & after, uint32_t tag)
+			d.simulate_to_end([&deposit_buff, &pixels](particle const & before, particle const & after, float edep, uint32_t tag)
 			{
 				deposit_buff.add(std::array<float, 5>{
 					after.pos.x, after.pos.y, after.pos.z,
-					before.kin_energy, before.kin_energy - after.kin_energy});
+					before.kin_energy, edep});
 				deposit_buff.add(std::array<int, 2>{
 					pixels[tag].x, pixels[tag].y});
 			});

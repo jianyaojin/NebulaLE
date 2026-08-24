@@ -51,7 +51,7 @@ public:
 
 		// Manually set the sampled path to infinity if above 100 eV. We only use Phonon Mott scattering below
 		// 100 eV.
-		if (this_particle.kin_energy >= 100){
+		if (this_particle.kin_energy >= 15){
 			return std::numeric_limits<real>::infinity();
 		}
 
@@ -63,7 +63,7 @@ public:
 	 * \brief Perform a scattering event
 	 */
 	template<typename particle_manager>
-	inline PHYSICS void execute(
+	inline PHYSICS real execute(
 		particle_manager& particle_mgr,
 		typename particle_manager::particle_index_t particle_idx,
 		util::random_generator<gpu_flag>& rng) const
@@ -99,6 +99,8 @@ public:
 
 		// Update the counter for scattering events
 		particle_mgr.update_scatter_counter(particle_idx);
+
+		return std::numeric_limits<float>::quiet_NaN();
 	}
 
 	/**

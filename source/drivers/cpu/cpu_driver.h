@@ -109,7 +109,7 @@ protected:
 	// Functions used in simulations
 	inline void init(particle_index_t particle_idx);
 	inline void intersect(particle_index_t particle_idx);
-	inline void scatter(particle_index_t particle_idx);
+	inline real scatter(particle_index_t particle_idx);
 
 	cpu_driver(cpu_driver const &) = delete;
 	cpu_driver& operator=(cpu_driver const &) = delete;

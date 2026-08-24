@@ -3,15 +3,15 @@
 #include <iostream>
 #include <mutex>
 #include <sstream>
+#include <string>
 
 namespace nbl { namespace scatter {
 
-inline void penn_debug_print(const std::string& message)
+inline void holegen_debug_print(std::string const& msg)
 {
-    static std::mutex output_mutex;
-    std::lock_guard<std::mutex> lock(output_mutex);
-
-    std::clog << message << '\n';
+    static std::mutex m;
+    std::lock_guard<std::mutex> lock(m);
+    std::cerr << msg << '\n' << std::flush;
 }
 
 /**
@@ -71,7 +71,7 @@ public:
 	 * \brief Perform a scattering event
 	 */
 	template<typename particle_manager>
-	inline PHYSICS void execute(
+	inline PHYSICS real execute(
 		particle_manager& particle_mgr,
 		typename particle_manager::particle_index_t particle_idx,
 		util::random_generator<gpu_flag>& rng) const
@@ -106,6 +106,10 @@ public:
 
 		// Normalise direction
 		normalise(this_particle.dir);
+
+		// Make variable for storing energy deposition. The choice here is that we only count inelastic
+		// events where no SE is generated as EDEP.
+		real edep{omega};
 
 		// No inner-shell binding energy: Fermi sea excitation
 		if (binding <= 0)
@@ -217,6 +221,15 @@ public:
 
 						secondary_particle.kin_energy = x*omega + omega;
 						secondary_particle.dir = rng.uniform_vector();
+						edep = 0;
+
+						std::ostringstream oss;
+						oss << "Plasmon Decay SE,"
+							<< this_particle.pos.x << ","
+							<< this_particle.pos.y << ","
+							<< this_particle.pos.z;
+
+						holegen_debug_print(oss.str());
 					}
 					else if (q < k_fermi_omega + k_fermi)
 					{
@@ -245,17 +258,28 @@ public:
 
 						secondary_particle.kin_energy = magnitude_squared(ki) + omega;
 						secondary_particle.dir = ki + q*q_dir;
+						edep = 0;
+						
+						std::ostringstream oss;
+						oss << "Single Excitation SE,"
+							<< this_particle.pos.x << ","
+							<< this_particle.pos.y << ","
+							<< this_particle.pos.z;
+
+						holegen_debug_print(oss.str());
+
 					}
 					else
 					{
 						// q is too large for either plasmon decay or single
 						// excitation: do not create a secondary electron.
-						return;
+						holegen_debug_print("Energy loss but no SE Generated");
+						return edep;
 					}
 
 					particle_mgr.create_secondary(particle_idx, secondary_particle);
 				}
-				return;
+				return edep;
 			}
 			else
 			{
@@ -265,7 +289,8 @@ public:
 				this_particle.kin_energy -= omega;
 				particle_mgr[particle_idx] = this_particle;
 				particle_mgr.update_edge_tag(particle_idx);
-				return;
+				holegen_debug_print("Energy loss lower than bandgap");
+				return edep;
 			}
 		}
 
@@ -312,7 +337,18 @@ public:
 			secondary_particle.dir = secondary_dir;
 
 			particle_mgr.create_secondary(particle_idx, secondary_particle);
+			edep = 0;
+
+			std::ostringstream oss;
+			oss << "Inner Shell SE,"
+				<< this_particle.pos.x << ","
+				<< this_particle.pos.y << ","
+				<< this_particle.pos.z;
+
+			holegen_debug_print(oss.str());
 		}
+
+		return edep;
 	}
 
 

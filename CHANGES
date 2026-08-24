@@ -1,6 +1,10 @@
 nebula changelog
 
-1.1.0 (2026-10-08)
+1.1.1 (2026-08-24)
+  - Added an EDEP fix to remove the problem of double counting SE energy. The edep function now outputs: 0 for SE generating inelastic events, energy loss omega for non SE generating inelastic events, and NaN for elastic, quasi elastic or boundary crossing events.
+  - Changed the transition energy between phonon and Mott scattering to 15 eV inside the sample.
+
+1.1.0 (2026-08-10)
   - Separated phonon scattering and elastic scattering channels.
     - Created an artificial transition between the two at 100 eV
   - Fixed q values in full_penn not being read using the right scale.

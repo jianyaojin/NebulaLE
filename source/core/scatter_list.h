@@ -122,13 +122,14 @@ public:
 	 * \param rng          A random number generator.
 	 */
 	template<typename particle_manager, typename rng_t>
-	inline PHYSICS void execute(uint8_t i,
+	inline PHYSICS real execute(uint8_t i,
 		particle_manager& particle_mgr,
 		typename particle_manager::particle_index_t particle_idx,
 		rng_t& rng) const
 	{
 		execute_visitor<particle_manager, rng_t> visitor{ particle_mgr, particle_idx, rng };
-		nbl::tuple::visit_at(*this, i-1, visitor);
+		real visited_output = nbl::tuple::visit_at(*this, i-1, visitor);
+		return visited_output;
 	}
 
 private:
@@ -168,9 +169,10 @@ private:
 		rng_t& rng;
 
 		template<typename scatter_type>
-		inline PHYSICS void operator()(scatter_type& scatter)
+		inline PHYSICS real operator()(scatter_type& scatter)
 		{
-			scatter.execute(particle_mgr, particle_idx, rng);
+			real se_energy = scatter.execute(particle_mgr, particle_idx, rng);
+			return se_energy;
 		}
 	};
 };

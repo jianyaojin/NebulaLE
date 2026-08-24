@@ -83,11 +83,11 @@ public:
 				const particle before = this->_particles[particle_idx];
 
 				this->intersect(particle_idx);
-				this->scatter(particle_idx);
+				real material_edep = this->scatter(particle_idx);
 
 				const particle after = this->_particles[particle_idx];
 				if (track && before.kin_energy != after.kin_energy)
-					func(before, after,
+					func(before, after, material_edep,
 						this->_particles.get_primary_tag(particle_idx));
 			}
 		}

@@ -132,14 +132,17 @@ namespace detail
 
 	// visit_at()
 	template<size_t i, typename T, typename F>
-	inline PHYSICS typename std::enable_if<i != 0, void>::type visit_at_impl(T const & tup, size_t idx, F& fun)
+	inline PHYSICS typename std::enable_if<i != 0, real>::type visit_at_impl(T const & tup, size_t idx, F& fun)
 	{
-		if (idx == i - 1) fun(get<i - 1>(tup));
-		else visit_at_impl<i - 1>(tup, idx, fun);
+		if (idx == i - 1){ 
+			real func_output = fun(get<i - 1>(tup));
+			return func_output;
+			}
+		else {return visit_at_impl<i - 1>(tup, idx, fun);}
 	}
 	template<size_t i, typename T, typename F>
-	inline PHYSICS typename std::enable_if<i == 0, void>::type visit_at_impl(T const &, size_t, F&)
-	{}
+	inline PHYSICS typename std::enable_if<i == 0, real>::type visit_at_impl(T const &, size_t, F&)
+	{return std::numeric_limits<float>::quiet_NaN();}
 }
 
 /**
@@ -171,9 +174,10 @@ PHYSICS void for_each(tuple<Ts...> const & tup, F& fun)
  * \param fun The function to be called.
  */
 template<typename F, typename... Ts>
-PHYSICS void visit_at(tuple<Ts...> const & tup, size_t idx, F& fun)
+PHYSICS real visit_at(tuple<Ts...> const & tup, size_t idx, F& fun)
 {
-	detail::visit_at_impl<sizeof...(Ts)>(tup, idx, fun);
+	real output_visit_at = detail::visit_at_impl<sizeof...(Ts)>(tup, idx, fun);
+	return output_visit_at;
 }
 
 }} // namespace nbl::tuple

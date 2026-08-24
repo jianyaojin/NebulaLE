@@ -145,18 +145,19 @@ void cpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::intersect(part
 template<typename scatter_list_t,
 	typename intersect_t,
 	typename geometry_manager_t>
-void cpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::scatter(particle_index_t particle_idx)
+real cpu_driver<scatter_list_t, intersect_t, geometry_manager_t>::scatter(particle_index_t particle_idx)
 {
 	// ignore all particles except those with an inelastic event.
 	if (!_particles.next_scatter(particle_idx))
-		return;
+		return std::numeric_limits<real>::quiet_NaN();
 
 	// forget last intersected triangle. This event might cause us to scatter
 	// back into that triangle and we don't want to ignore that triangle if so.
 	_particles.forget_last_triangle(particle_idx);
 
-	_materials[_particles.get_material_index(particle_idx)].execute(
+	real executed_output = _materials[_particles.get_material_index(particle_idx)].execute(
 		_particles.get_next_scatter(particle_idx), _particles, particle_idx, rand_state);
+	return executed_output;
 }
 
 }} // namespace nbl::drivers
