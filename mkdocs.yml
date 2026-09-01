@@ -30,6 +30,7 @@ nav:
     - NebulaLE:
         - v1.0.3 (Base): release-notes/nebulale/v1.0.3.md
         - v1.1.0: release-notes/nebulale/v1.1.0.md
+        - v1.1.1: release-notes/nebulale/v1.1.1.md
 
     - cstoolLE:
         - v1.0.7 (Base): release-notes/cstoolle/v1.0.7.md

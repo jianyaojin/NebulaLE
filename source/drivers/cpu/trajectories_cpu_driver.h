@@ -2,6 +2,7 @@
 #define __TRAJECTORIES_CPU_DRIVER_H_
 
 #include "cpu_driver.h"
+#include <stdexcept>
 
 namespace nbl { namespace drivers {
 
@@ -79,16 +80,22 @@ public:
 				this->init(particle_idx);
 
 				// Variables that check for the status of the particle
-				bool track_scatter = this->_particles.next_scatter(particle_idx);
 				bool track_terminated = this->_particles.terminated(particle_idx);
+				bool track_scatter = this->_particles.next_scatter(particle_idx);
 				bool track_intersect = this->_particles.next_intersect(particle_idx);
 
+				// Save particle information before anything is done to it (this->init has already moved it into place though)
 				const particle before = this->_particles[particle_idx];
 				const int parent_edge = static_cast<int>(this->_particles.get_edge_tag(particle_idx));
+				uint8_t next_scatter_evt{0};
+				if (track_scatter){
+					next_scatter_evt = this->_particles.get_next_scatter(particle_idx);
+				}
 
 				// Get the number of particles in the simulation to check later if a secondary was generated.
 				const size_t num_before = this->_particles.get_total_count(); 
 
+				// Original code: Perform either the intersect or scatter event (unless terminated or detected)
 				this->intersect(particle_idx);
 				this->scatter(particle_idx);
 
@@ -113,20 +120,49 @@ public:
       				? child_edge_one
       				: static_cast<int>(this->_particles.get_edge_tag(num_after - 1));
 
-				if (track_scatter)
-					func(before, after,
-						this->_particles.get_primary_tag(particle_idx),
-						parent_edge, child_edge_one, child_edge_two 
-					);
-				else if (track_terminated)
+				// Output information based on the situation
+				if (track_terminated)
 					func(before, after,
 						this->_particles.get_primary_tag(particle_idx),
 						parent_edge, -999, -999
 					);
+				else if (track_scatter){
+					if (next_scatter_evt == 1 && num_before != num_after){
+						// Inelastic, SE is generated
+						func(before, after,
+							this->_particles.get_primary_tag(particle_idx),
+							parent_edge, child_edge_one, child_edge_two 
+						);					
+					}
+					else if (next_scatter_evt == 1 && num_before == num_after){
+						// Inelastic, no SE generated 
+						func(before, after,
+							this->_particles.get_primary_tag(particle_idx),
+							parent_edge, child_edge_one, -1 
+						);	
+					}
+					else if (next_scatter_evt == 2){
+						// Elastic
+						func(before, after,
+							this->_particles.get_primary_tag(particle_idx),
+							parent_edge, child_edge_one, -2 
+						);	
+					}
+					else if (next_scatter_evt == 3){
+						// Quasi elastic
+						func(before, after,
+							this->_particles.get_primary_tag(particle_idx),
+							parent_edge, child_edge_one, -3
+						);	
+					}
+					else{
+						throw std::runtime_error("Invalid scattering event ID in scatter()");
+					}	
+				}
 				else if (track_intersect)       
 					func(before, after,
 						this->_particles.get_primary_tag(particle_idx),
-						parent_edge, child_edge_one, -child_edge_two 
+						parent_edge, child_edge_one, -997 
 					);
 			}
 		}
@@ -134,5 +170,6 @@ public:
 };
 
 }} // namespace nbl::drivers
+// 見つけてえらい!
 
 #endif // __TRAJECTORIES_CPU_DRIVER_H_

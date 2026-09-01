@@ -1,6 +1,10 @@
 nebula changelog
 
-1.1.0 (2026-10-08)
+1.1.1 (2026-09-01)
+  - Fixed bug in trajectories version (nebula_cpu_traj): All inelastic and quasi elastic events are now outputted correctly.
+  - Changed crossover energy to 15 eV instead of 100 eV.
+
+1.1.0 (2026-08-10)
   - Separated phonon scattering and elastic scattering channels.
     - Created an artificial transition between the two at 100 eV
   - Fixed q values in full_penn not being read using the right scale.

@@ -97,8 +97,10 @@ def construct_tree(dat, triangles_geom, triangles_detplane, x_range=None, y_rang
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(dat[0]['x'],dat[0]['y'],dat[0]['z'], marker='o', color='purple')
 
-    inel_counter = 0
+    inel_SE_counter = 0
+    inel_noSE_counter = 0
     el_counter = 0
+    qel_counter = 0
     bc_counter = 0
     term_counter = 0
     
@@ -110,26 +112,34 @@ def construct_tree(dat, triangles_geom, triangles_detplane, x_range=None, y_rang
     # Plot the rest
     for i in range(len(dat)):
 
-        # Distinguish between inelastic, elastic, boundary crossing and termination events
-        if dat[i]['ce1'] == dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
-            # Elastic is blue-ish
-            el_counter += 1
-            colorsVertex.append('mediumturquoise')
-        elif dat[i]['ce1'] == -dat[i]['ce2'] and not dat[i]['ce1'] == -999 and not dat[i]['ce1'] == -998:
-            # Boundary crossing is green
-            bc_counter += 1
-            colorsVertex.append('lime')
-        elif dat[i]['ce1'] == -999:
+        # Distinguish between inelastic, elastic, quasi elastic, boundary crossing and termination events
+        if dat[i]['ce1'] == -999:
             # Termination is red
             term_counter += 1
             colorsVertex.append('red')
         elif dat[i]['ce1'] == -998:
-            # Detection is yellow
+            # Detection is forestgreen
             bc_counter += 1
             colorsVertex.append('forestgreen')
+        elif np.sign(dat[i]['ce1']) == 1 and dat[i]['ce2'] == -997:
+            # Boundary crossing is lime
+            bc_counter += 1
+            colorsVertex.append('lime')
+        elif np.sign(dat[i]['ce1']) == 1 and dat[i]['ce2'] == -1:
+            # Inelastic where no SE is generated, give it orange
+            inel_noSE_counter += 1
+            colorsVertex.append('orange')
+        elif np.sign(dat[i]['ce1']) == 1 and dat[i]['ce2'] == -2:
+            # Elastic scattering event, give it deep blue
+            el_counter += 1
+            colorsVertex.append('blue')
+        elif np.sign(dat[i]['ce1']) == 1 and dat[i]['ce2'] == -3:
+            # Quasi elastic scattering event, give it turquoise
+            qel_counter += 1
+            colorsVertex.append('mediumturquoise')
         else:
-            # Inelastic is orange
-            inel_counter += 1
+            # Only remaining option is inelastic generation: Give it orange.
+            inel_SE_counter += 1
             colorsVertex.append('orange')
 
         # Plot the parent edge
@@ -200,7 +210,9 @@ def construct_tree(dat, triangles_geom, triangles_detplane, x_range=None, y_rang
     else:
         ax.set_zlim(zmin, zmax)
 
-    print(f'Number of inelastic scattering events: {inel_counter}')
+    print(f'Number of inelastic scattering events with SE generation: {inel_SE_counter}')
+    print(f'Number of inelastic scattering events: with no SE generation: {inel_noSE_counter}')
+    print(f'Number of quasi elastic scattering events: {qel_counter}')
     print(f'Number of elastic scattering events: {el_counter}')
     print(f'Number of termination scattering events: {term_counter}')
     
@@ -250,18 +262,18 @@ if __name__ == "__main__":
         ('px', '=i'), ('py', '=i')]) # tags of primary electron
 
     ### Read output file
-    data = np.fromfile("singleline_primaries_at_edge_19nm.det", dtype=trajectory_dtype)
+    data = np.fromfile("trajdep1kev_docs.det", dtype=trajectory_dtype)
 
-    ### Process and prepare the data
-    one_traj = filter_one(data, 1)
-    print(one_traj)
+    ### Process and prepare the data 
+    one_traj = filter_one(data, 11)
+    #print(one_traj)
     #print(f'How many Lower than 0 nm? {one_traj[one_traj["z"] < 0]}')
     #print(f'Any detected electrons: {one_traj[one_traj["ce1"] == -998]}')
     #print(f'BC events: {one_traj[one_traj["ce1"] == -one_traj["ce2"]]}')
     #print(f'Detection point {one_traj[one_traj["ce1"] == 455]}')
 
-    t_geom, t_detplane = read_tri_file("single_40x20_line.tri")
-    construct_tree(one_traj, t_geom, t_detplane, y_range=[-40,40])
+    t_geom, t_detplane = read_tri_file("geom.tri")
+    construct_tree(one_traj, t_geom, t_detplane, x_range = [-5,5], y_range = [-5,5], z_range=[-1,2])
 
 
 """

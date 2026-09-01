@@ -1,7 +1,19 @@
 #ifndef __KIEFT_ELASTIC_H_
 #define __KIEFT_ELASTIC_H_
 
+#include <iostream>
+#include <mutex>
+#include <sstream>
+
 namespace nbl { namespace scatter {
+
+inline void elastic_debug_print(const std::string& message)
+{
+    static std::mutex output_mutex;
+    std::lock_guard<std::mutex> lock(output_mutex);
+
+    std::clog << message << '\n';
+}
 
 /**
  * \brief Kieft and Bosch's elastic scattering model, but only the Mott scattering part.
@@ -55,9 +67,9 @@ public:
 		// Get inverse mean free path for this kinetic energy
 		const real imfp = expr(_log_imfp_table.get(logr(this_particle.kin_energy)));
 
-		// Manually set the sampled path to infinity if below 100 eV. We only use Mott scattering above
-		// 100 eV.
-		if (this_particle.kin_energy < 100){
+		// Manually set the sampled path to infinity if below 15 eV. We only use Mott scattering above
+		// 15 eV.
+		if (this_particle.kin_energy < 15){
 			return std::numeric_limits<real>::infinity();
 		}
 

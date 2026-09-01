@@ -270,7 +270,7 @@ public:
 		}
 
 		// Inner-shell excitation.
-
+		
 		// determine random normal vector to determine the scattering direction
 		vec3 normal_dir = normalised(make_normal_vec(this_particle.dir, rng.phi()));
 
